@@ -1,23 +1,30 @@
 import React, { useState } from "react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { app } from '../firebase'
+
+const auth = getAuth(app);
 
 export const Login = (props) => {
     const [email, setEmail] = useState("");
-    const [pass, setPass] = useState("");
+    const [password, setPassword] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email);
-        console.log(pass);
+        console.log(password);
+        signInWithEmailAndPassword(auth, email, password)
+        .then(value => { alert("Successfully Loggedin")})
+        .catch((err)=> console.log(err));
     };
     const handleEmailOnChange = (e) => {
         e.preventDefault();
         console.log("On Change");
         setEmail(e.target.value);
     };
-    const handlePassOnChange = (e) => {
+    const handlePasswordOnChange = (e) => {
         e.preventDefault();
         console.log("On Change");
-        setPass(e.target.value);
+        setPassword(e.target.value);
     };
     return (
         <div className="auth-form-container">
@@ -33,8 +40,8 @@ export const Login = (props) => {
                 />
                 <label htmlFor="password">Password</label>
                 <input
-                    value={pass}
-                    onChange={handlePassOnChange}
+                    value={password}
+                    onChange={handlePasswordOnChange}
                     type="password"
                     placeholder="********"
                     id="password"

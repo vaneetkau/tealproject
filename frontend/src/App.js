@@ -17,6 +17,7 @@ function App() {
   const signupPgae = () => {
     createUserWithEmailAndPassword(
       auth, 
+      "Noyal Godara",
       "noyal@xyz.com",
       "6789@noyal"
     ).then((value) => console.log(value));
