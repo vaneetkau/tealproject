@@ -20,8 +20,8 @@ export const Login = (props) => {
         setPass(e.target.value);
     };
     return (
-        <>
-            <form onSubmit={handleSubmit}>
+        <div className="auth-form-container">
+            <form className="login-form" onSubmit={handleSubmit}>
                 <label htmlFor="email">Email</label>
                 <input
                     value={email}
@@ -42,7 +42,7 @@ export const Login = (props) => {
                 />
                 <button type="submit">Login</button>
             </form>
-            <button onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here</button>
-        </>
+            <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here</button>
+        </div>
     );
 };
