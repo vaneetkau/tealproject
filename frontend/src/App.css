@@ -3,17 +3,46 @@
   display:flex;
   min-height: 100vh;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+  padding: 0 0 0 20px;
+  background-color: #2267CA;
 }
 
 .auth-form-container, .login-form, .register-form{
   display: flex;
   flex-direction: column;
+  background-color: white;
+  width: 25vw;
+  line-height: 2.5;
 }
+
 .auth-form-container{
   border: 1px solid grey;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 100px 0px 0px 100px;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form > h2 {
+  color: #2267CA;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.25);
+}
+
+.login-form > input {
+  border-radius: 10px;
+  border: 1px solid rgba(123, 123, 123, 0.30);
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+}
+
+.login-form > label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2267CA;
 }
 
 label {
@@ -25,15 +54,40 @@ input{
   margin: 0.5rem 0;
 }
 
-button{
-  padding: 10px;
-  border-radius: 10px;
+.submit{
+  padding: 12px;
+  border: 0px;
+  border-radius: 50px;
   margin: 0.5rem 0;
+  background-color: #2267CA;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .link-btn{
+  align-self: end;
   border: none;
-  background-color: none;
-  color: rgb(69, 69, 251);
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFB700;
   text-decoration: underline;
+  font-weight: 600;
+}
+
+p {
+  font-size: 13px;
+}
+
+.welcomeMsg{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-weight: 700;
+  color: white;
+  width: 100vw;
+  padding: 1rem;
+}
+
+.welcomeMsg > p {
+  font-size: 18px;
 }
