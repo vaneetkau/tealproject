@@ -1,10 +1,8 @@
 .App {
   text-align: center;
   display:flex;
-  min-height: 100vh;
-  align-items: center;
+  max-height: 100vh;
   justify-content: end;
-  padding: 0 0 0 20px;
   background-color: #2267CA;
 }
 
@@ -87,10 +85,10 @@ p {
 .welcomeMsg{
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
+  justify-content: space-between;
   font-weight: 700;
   color: white;
-  width: 100vw;
   padding: 1rem;
 }
 
