@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { app } from '../firebase'
+import { useNavigate } from "react-router-dom";
+import { app } from '../../firebase';
 
 const auth = getAuth(app);
 
@@ -8,13 +9,20 @@ export const Login = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const navigate = useNavigate();
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email);
         console.log(password);
         signInWithEmailAndPassword(auth, email, password)
-        .then(value => { alert("Successfully Loggedin")})
-        .catch((err)=> console.log(err));
+        .then(value => { 
+            alert("Successfully Loggedin")
+            navigate("/MyProfile") 
+        })
+        .catch((error) => {
+            alert("Login failed");
+        })
     };
     const handleEmailOnChange = (e) => {
         e.preventDefault();

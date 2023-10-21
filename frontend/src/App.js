@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";                      //firebase authentication
-import { app } from './firebase'                              //firebase
+import { app } from './firebase'                                                              //firebase
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";                    //React-Router-DOM
 import './App.css';
-import { Login } from './Components/Login';
-import { Register } from './Components/Register';
+import { Login } from './Components/UserAuthentication/Login';
+import { Register } from './Components/UserAuthentication/Register';
+import { MyProfile } from './Components/MyProfile';
 
-const auth = getAuth(app);                                    //firebase authentication
+
+const auth = getAuth(app);                                                                    //firebase authentication
 
 
 function App() {
@@ -24,10 +27,20 @@ function App() {
   }
 
   return (
-    <div className="App">
-      { currentForm === "login" ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>}
-     
-  </div>
+    <>
+      <Router>
+        <div className="App">
+        <Routes>
+          { currentForm === "login" ? (
+            <Route path="/" element={<Login onFormSwitch={toggleForm} />} />
+          ) : (
+            <Route path="/" element={<Register onFormSwitch={toggleForm} />} />
+          )}
+          <Route path="/myprofile" element={<MyProfile />} />
+        </Routes>
+          </div>
+      </Router>
+    </>
   );
 }
 
