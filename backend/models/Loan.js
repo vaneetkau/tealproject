@@ -1,14 +1,23 @@
 const mongoose = require('mongoose');
 
+
 const loanSchema = new mongoose.Schema({
-  student_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Student', required: true },
   type: String, // "loan" or "scholarship"
-  loan_amount: Number,
+  career: String, // Career information
+  institute: String, // Institute information
+  amount: Number, // Loan amount
   interest_rate: Number,
   loan_term: Number, // Number of months
   start_date: Date,
   end_date: Date, // For loan calculator
+  due_date: Date, // Due date for scholarships
+}, {
+  id: false, // Disable the 'id' field
 });
+
+
+
+
 
 
 const Loan = mongoose.model('Loan', loanSchema);

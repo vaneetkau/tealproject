@@ -2,16 +2,23 @@ const express = require('express');
 const router = express.Router();
 const Loan = require('../models/Loan');
 
+
 // Create a new loan
 router.post('/loans', async (req, res) => {
   try {
     const loan = new Loan(req.body);
     await loan.save();
-    res.json(loan);
+
+    // Fetch the saved loan from the database
+    const createdLoan = await Loan.findById(loan._id);
+
+    res.json(createdLoan); // Send the created loan in the response
   } catch (error) {
+    console.error('Error creating loan:', error);
     res.status(500).json({ error: 'Failed to create loan' });
   }
 });
+
 
 // Get all loans
 router.get('/loans', async (req, res) => {
@@ -22,6 +29,8 @@ router.get('/loans', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch loans' });
   }
 });
+
+
 
 
 
