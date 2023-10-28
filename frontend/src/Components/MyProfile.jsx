@@ -1,8 +1,17 @@
 import React from "react";
+import { useNavigate, Link } from "react-router-dom";
 import loanEaseLogo from "../LoanEaseLogo-White.png";
 import user from "../User.png";
 
+
 export const MyProfile = (props) => {
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate("/MyProfileSettings") 
+    };
+
   return (
     <>
       <div className="welcomeMsg">
@@ -36,6 +45,8 @@ export const MyProfile = (props) => {
           <li>Multitasker</li>
           <li>Public Speaking</li>
         </ul>
+
+        <button className="submit" type="submit"> <Link to="./MyProfileSettings">Profile</Link></button>
       </div>
     </>
   );
