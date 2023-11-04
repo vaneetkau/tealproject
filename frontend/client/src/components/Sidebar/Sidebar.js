@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,14 +12,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import GroupExample from '../LatestNews/LatestNews';
-import LoanAdvice from '../LoanAdvice/LoanAdvice';
-import GroupExampleF from '../FinancialContent/FinancialContent';
-import BankingSuggestions from '../BankingSuggestions/BankingSuggestions';
 import Button from '@mui/material/Button';
+
 const drawerWidth = 240;
 
-export default function PermanentDrawerLeft() {
+function Sidebar() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -34,7 +30,7 @@ export default function PermanentDrawerLeft() {
           </Typography>
         </Toolbar>
       </AppBar>
-      
+
       <Drawer
         sx={{
           width: drawerWidth,
@@ -63,7 +59,7 @@ export default function PermanentDrawerLeft() {
         </List>
         <Divider />
         <List>
-          {['Settings', 'Logout' ].map((text, index) => (
+          {['Settings', 'Logout'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -82,35 +78,23 @@ export default function PermanentDrawerLeft() {
         <Toolbar />
 
         <Typography paragraph>
-        Lorem ipsum, or lipsum as it is sometimes known 
+          Lorem ipsum, or lipsum as it is sometimes known
         </Typography>
         <Typography paragraph>
-        Apply For A Loan Or Scholarship
+          Apply For A Loan Or Scholarship
         </Typography>
 
         <Button variant="contained" color="success">
-            Our Services 
+          Our Services
         </Button>
-<br/><br/><br/>
+        <br /><br /><br />
         <Typography paragraph>
-          
           Product Description
         </Typography>
-       <GroupExample />
-       <Typography paragraph>
-          Loan Advice
-        </Typography>
-       <LoanAdvice />
-       <Typography paragraph>
-          Financial Content
-        </Typography>
-       <GroupExampleF/>
-       <Typography paragraph>
-          Banking Suggestions
-        </Typography>
-       <BankingSuggestions/>
-
+        {}
       </Box>
     </Box>
   );
 }
+
+export default Sidebar;

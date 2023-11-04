@@ -1,13 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import {Container ,Card,Row, Col, Button} from 'react-bootstrap';  
+import { useNavigate } from "react-router-dom";
+import PaymentMethod from '../../pages/Pay/PaymentMethod';
+
 //import img1 from './img1.jpg';  
 function GroupExample() {  
+  const navigate = useNavigate();
     
   return (  
-    
+
     <div className="App">  
-   
+
    <Container className='p-4'>  
+    <PaymentMethod/>
+
      <Row>  
      
  { [  

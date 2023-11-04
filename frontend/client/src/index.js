@@ -17,8 +17,8 @@ root.render(
     <GroupExampleF />
     <BankingSuggestions />
     <LoanAdvice /> */}
-<Sidebar />
-    {/* <App /> */}
+{/* <Sidebar /> */}
+    <App />
 
 
   </React.StrictMode>
