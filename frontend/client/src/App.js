@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";                      //firebase authentication
 import { app } from './firebase'                                                              //firebase
@@ -16,6 +17,7 @@ import Pay from "./pages/Pay/Pay";
 const auth = getAuth(app);                                                                    //firebase authentication
 
 
+
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
 
@@ -32,6 +34,7 @@ function App() {
   }
 
   return (
+
     <>
       <Router>
         
@@ -54,6 +57,7 @@ function App() {
           </div>
       </Router>
     </>
+
   );
 }
 
