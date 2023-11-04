@@ -55,7 +55,7 @@ input{
   margin: 0.5rem 0;
 }
 
-.submit{
+.submit-3X{
   padding: 12px;
   border: 0px;
   border-radius: 50px;
@@ -66,6 +66,47 @@ input{
   font-size: 16px;
   width: 40vw;
   align-self: center;
+}
+.submit-2X{
+  padding: 8px;
+  border: 0px;
+  border-radius: 50px;
+  margin: 0.5rem 0;
+  background-color: #2267CA;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  width: 40vw;
+  align-self: center;
+}
+.submit-1X{
+  padding: 8px;
+  border: 0px;
+  border-radius: 50px;
+  margin: 0.5rem 0;
+  background-color: #2267CA;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  width: 20vw;
+  align-self: center;
+}
+.submit-1X-small{
+  padding: 8px;
+  border: 0px;
+  border-radius: 50px;
+  margin: 0.5rem 0;
+  background-color: #2267CA;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  width: 8vw;
+  align-self: center;
+}
+
+.no-underline-link {
+  text-decoration: none;
+  color: white;
 }
 
 .link-btn{
@@ -95,3 +136,62 @@ p {
 .welcomeMsg > p {
   font-size: 18px;
 }
+
+table{
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
+th {
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: left;
+}
+
+
+/* MyProfileSettings */
+.container-white-background{
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  padding: 20px;
+}
+.half-screen{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.half-screen-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.75px solid black;
+  margin: 10px;
+  width: 100vw;
+  padding: 10px;
+}
+.container-flex-row>button{
+  margin : 10px;
+}
+
+
+
+/* Payment Mehtod */
+.container-rounded-upper-left-corner{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: white;
+  margin: 0px 0px 0px 0px;
+  border-radius: 0px 0px 0px 0px;
+}
+
+
+

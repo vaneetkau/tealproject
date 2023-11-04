@@ -1,16 +1,14 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import loanEaseLogo from "../LoanEaseLogo-White.png";
 import user from "../User.png";
+import MyProfileSettings from "./MyProfileSettings";
+import PaymentMethod from "../pages/Pay/PaymentMethod";
+import Sidebar from "./Sidebar/Sidebar";
+import Statement from "../pages/Statement/Statement";
+import Pay from "../pages/Pay/Pay";
 
-
-export const MyProfile = (props) => {
-    const navigate = useNavigate();
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        navigate("/MyProfileSettings") 
-    };
+const MyProfile = (props) => {
 
   return (
     <>
@@ -46,8 +44,14 @@ export const MyProfile = (props) => {
           <li>Public Speaking</li>
         </ul>
 
-        <button className="submit" type="submit"> <Link to="./MyProfileSettings">Profile</Link></button>
+        <button className="submit-3X" type="submit-3X"> <Link to="/MyProfileSettings" className="no-underline-link">Profile</Link></button>
+        <button className="submit-3X" type="submit-3X"> <Link to="/PaymentMethod" className="no-underline-link">Temp to Payment Method</Link></button>
+        <button className="submit-3X" type="submit-3X"> <Link to="/Sidebar" className="no-underline-link">Temp to Sidebar</Link></button>
+        <button className="submit-3X" type="submit-3X"> <Link to="/Statement" className="no-underline-link">Temp to Statements</Link></button>
+        <button className="submit-3X" type="submit-3X"> <Link to="/Pay" className="no-underline-link">Temp to My Pay</Link></button>
       </div>
     </>
   );
 };
+
+export default MyProfile
