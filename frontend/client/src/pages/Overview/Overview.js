@@ -1,10 +1,8 @@
-// Overview.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
 function Overview() {
-  // Calculate the current bill amount (you can replace this with your actual logic)
   const currentBillAmount = 120.0;
 
   const [cardholderName, setCardholderName] = useState('');
@@ -19,7 +17,6 @@ function Overview() {
 
   const handleDonePayment = () => {
     if (editingIndex !== -1) {
-      // Editing an existing payment method
       const updatedPaymentMethods = [...paymentMethods];
       updatedPaymentMethods[editingIndex] = {
         type: cardholderName,
@@ -28,14 +25,12 @@ function Overview() {
       setPaymentMethods(updatedPaymentMethods);
       setEditingIndex(-1);
     } else {
-      // Adding a new payment method
       setPaymentMethods([
         ...paymentMethods,
         { type: cardholderName, number: accountHolder },
       ]);
     }
 
-    // Clear input fields
     setCardholderName('');
     setAccountHolder('');
     setExpiryDate('');
@@ -53,52 +48,102 @@ function Overview() {
     <div style={{ display: 'flex' }}>
       <Sidebar />
 
-      <div style={{ marginLeft: '20px', marginTop:'70px'}}>
+      <div style={{ marginLeft: '20px', marginTop: '70px' }}>
         <h1>Current Bill Details</h1>
-        <p>The estimate amount of your current bill is ${currentBillAmount.toFixed(2)} and it's due on 06/10/2022.</p>
-        <button style={{ padding: '10px', backgroundColor: 'blue', color: 'white', border: 'none' }}>Pay</button>
+        <p>
+          The estimated amount of your current bill is ${currentBillAmount.toFixed(2)} and it's due on 06/10/2022.
+        </p>
+        <button
+          style={{
+            padding: '10px',
+            backgroundColor: 'blue',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            width: '100px'
+          }}
+        >
+          <Link to="/" className='no-underline-link'>Pay</Link>
+        </button>
 
         <div style={{ marginTop: '20px' }}>
           <h2>{editingIndex !== -1 ? 'Edit Payment' : 'Edit Payment'}</h2>
-          <div style={{ border: '1px solid #ccc', borderRadius: '5px', padding: '20px', backgroundColor: '#f0f0f0' }}>
-            <input
-              type="text"
-              placeholder="Cardholder Name"
-              value={cardholderName}
-              onChange={(e) => setCardholderName(e.target.value)}
-              style={{ marginBottom: '10px', padding: '5px', border: '1px solid #ddd' }}
-            />
-            <input
-              type="text"
-              placeholder="Account Number"
-              value={accountHolder}
-              onChange={(e) => setAccountHolder(e.target.value)}
-              style={{ marginBottom: '10px', padding: '5px', border: '1px solid #ddd' }}
-            />
-            <input
-              type="text"
-              placeholder="Expiry Date"
-              value={expiryDate}
-              onChange={(e) => setExpiryDate(e.target.value)}
-              style={{ marginBottom: '10px', padding: '5px', border: '1px solid #ddd' }}
-            />
-            <input
-              type="text"
-              placeholder="CVV"
-              value={cvv}
-              onChange={(e) => setCvv(e.target.value)}
-              style={{ marginBottom: '10px', padding: '5px', border: '1px solid #ddd' }}
-            />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              border: '1px solid #ccc',
+              borderRadius: '5px',
+              padding: '20px',
+              backgroundColor: '#f0f0f0',
+            }}
+          >
+            <div style={{ marginBottom: '20px', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ display: 'flex', marginBottom: '10px' }}>
+                <label htmlFor="cardholderName" style={{ flexBasis: '150px', marginRight: '10px' }}>
+                  Cardholder Name:
+                </label>
+                <input
+                  type="text"
+                  id="cardholderName"
+                  placeholder="Enter cardholder name"
+                  value={cardholderName}
+                  onChange={(e) => setCardholderName(e.target.value)}
+                  style={{ flex: '1', padding: '5px', border: '1px solid #ddd' }}
+                />
+              </div>
+              <div style={{ display: 'flex', marginBottom: '10px' }}>
+                <label htmlFor="accountNumber" style={{ flexBasis: '150px', marginRight: '10px' }}>
+                  Account Number:
+                </label>
+                <input
+                  type="text"
+                  id="accountNumber"
+                  placeholder="Enter account number"
+                  value={accountHolder}
+                  onChange={(e) => setAccountHolder(e.target.value)}
+                  style={{ flex: '1', padding: '5px', border: '1px solid #ddd' }}
+                />
+              </div>
+              <div style={{ display: 'flex', marginBottom: '10px' }}>
+                <label htmlFor="expiryDate" style={{ flexBasis: '150px', marginRight: '10px' }}>
+                  Expiry Date:
+                </label>
+                <input
+                  type="text"
+                  id="expiryDate"
+                  placeholder="Enter expiry date"
+                  value={expiryDate}
+                  onChange={(e) => setExpiryDate(e.target.value)}
+                  style={{ flex: '1', padding: '5px', border: '1px solid #ddd' }}
+                />
+              </div>
+              <div style={{ display: 'flex', marginBottom: '10px' }}>
+                <label htmlFor="cvv" style={{ flexBasis: '150px', marginRight: '10px' }}>
+                  CVV:
+                </label>
+                <input
+                  type="text"
+                  id="cvv"
+                  placeholder="Enter CVV"
+                  value={cvv}
+                  onChange={(e) => setCvv(e.target.value)}
+                  style={{ flex: '1', padding: '5px', border: '1px solid #ddd' }}
+                />
+              </div>
+            </div>
             <button
               onClick={handleDonePayment}
               style={{
                 padding: '10px',
-                backgroundColor: 'green',
+                backgroundColor: 'blue',
                 color: 'white',
                 border: 'none',
-                width: '100px', // Set width to 'auto' to make the button shorter
+                width: '100px',
                 borderRadius: '5px',
                 cursor: 'pointer',
+                alignSelf: 'center',
               }}
             >
               {editingIndex !== -1 ? 'Done' : 'Done'}
@@ -111,13 +156,22 @@ function Overview() {
           <div key={index} style={{ marginBottom: '10px', border: '1px solid #ccc', padding: '10px' }}>
             <p>{method.type}</p>
             <p>{method.number}</p>
-            <button onClick={() => handleEditPayment(index)} style={{ padding: '5px', backgroundColor: 'orange', color: 'white', border: 'none' }}>
+            <button
+              onClick={() => handleEditPayment(index)}
+              style={{
+                padding: '5px',
+                backgroundColor: 'blue',
+                color: 'white',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+            >
               Edit Payment
             </button>
           </div>
         ))}
 
-        <Link to="/">Go Back</Link>
+        <Link to="/"></Link>
       </div>
     </div>
   );
