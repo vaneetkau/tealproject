@@ -15,6 +15,7 @@ function Overview() {
   ]);
   const [editingIndex, setEditingIndex] = useState(-1);
   const [isMobileView, setIsMobileView] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDonePayment = () => {
     if (editingIndex !== -1) {
@@ -72,30 +73,67 @@ function Overview() {
     };
   }, []);
 
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const dropdownLinks = [
+    { label: 'Home', to: '/' },
+    { label: 'Latest News', to: '/' },
+    { label: 'Get Advise', to: '/' },
+    { label: 'Get Your Ease', to: '/' },
+    { label: 'Settings', to: '/' },
+    { label: 'Logout', to: '/' },
+  ];
+
   return (
     <div style={{ display: 'flex', ...responsiveStyles }}>
       {/* Hamburger menu button (visible in responsive view) */}
       {isMobileView && (
-        <button
-          style={{
-            position: 'fixed',
-            top: '10px',
-            right: '10px',
-            zIndex: 999,
-            padding: '10px',
-            backgroundColor: 'blue',
-            color: 'white',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-          }}
-          onClick={() => {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
-          }}
-        >
-          ☰
-        </button>
+        <>
+          <button
+            style={{
+              position: 'fixed',
+              top: '10px',
+              right: '10px',
+              zIndex: 999,
+              padding: '10px',
+              backgroundColor: 'blue',
+              color: 'white',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+            }}
+            onClick={toggleDropdown}
+          >
+            ☰
+          </button>
+          {/* Conditional rendering for the dropdown menu */}
+          {isDropdownOpen && (
+            <div
+              style={{
+                position: 'fixed',
+                top: '50px',
+                right: '10px',
+                zIndex: 1000,
+                backgroundColor: 'white',
+                boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
+                borderRadius: '5px',
+                padding: '10px',
+              }}
+            >
+              <ul style={{ listStyleType: 'none', padding: 0 }}>
+                {dropdownLinks.map((link, index) => (
+                  <li key={index} style={{ marginBottom: '10px' }}>
+                    <Link to={link.to} className="no-underline-link" style={{ color: 'black' }}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </>
       )}
 
       <div style={{ display: 'flex' }}>
