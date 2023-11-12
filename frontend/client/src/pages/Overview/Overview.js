@@ -146,7 +146,7 @@ function Overview() {
           <Sidebar />
         </div>
 
-        <div style={{ marginRight: '50px', marginTop: '70px', marginLeft: '50px'}}>
+        <div style={{ marginRight: '50px', marginTop: '130px', marginLeft: '50px'}}>
           <h1>Current Bill Details</h1>
           <p>
             The estimated amount of your current bill is ${currentBillAmount.toFixed(2)} and it's due on 06/10/2022.
