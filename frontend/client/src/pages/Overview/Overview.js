@@ -151,7 +151,7 @@ function Overview() {
           <p>
             The estimated amount of your current bill is ${currentBillAmount.toFixed(2)} and it's due on 06/10/2022.
           </p>
-          <button className="submit-1X-small" type="submit"><Link to="/" className='no-underline-link'>Pay</Link>
+          <button className="submit-1X-small" type="submit"><Link to="/Pay" className='no-underline-link'>Pay</Link>
             
           </button>
 
