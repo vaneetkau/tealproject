@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
+
 function Overview() {
   const currentBillAmount = 120.0;
 
@@ -47,18 +48,17 @@ function Overview() {
   };
 
   const responsiveStyles = {
-    '@media (max-width: 768px)': {
+    '@media (max-width: 500px)': {
       flexDirection: 'column',
       alignItems: 'center',
     },
-    '@media (max-width: 480px)': {
-      // Add specific styles for smaller screens here
-    },
+
+        
   };
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth < 768);
+      setIsMobileView(window.innerWidth < 500);
     };
 
     // Add event listener for window resize
@@ -79,15 +79,19 @@ function Overview() {
 
   const dropdownLinks = [
     { label: 'Home', to: '/' },
-    { label: 'Latest News', to: '/' },
-    { label: 'Get Advise', to: '/' },
-    { label: 'Get Your Ease', to: '/' },
-    { label: 'Settings', to: '/' },
+    { label: 'Latest News', to: '/LatestNews' },
+    { label: 'Get Advise', to: '/LoanAdvice' },
+    { label: 'Get Your Ease', to: '/LoanList' },
+    { label: 'Settings', to: '/MyProfileSettings' },
     { label: 'Logout', to: '/' },
   ];
 
   return (
-    <div style={{ display: 'flex', ...responsiveStyles }}>
+    <div 
+      style={{ 
+        display: 'flex', ...responsiveStyles, backgroundColor: 'white', alignItems: 'center' }}>
+
+
       {/* Hamburger menu button (visible in responsive view) */}
       {isMobileView && (
         <>
@@ -136,31 +140,19 @@ function Overview() {
         </>
       )}
 
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex', ...responsiveStyles }}>
         {/* Sidebar */}
-        <div id="sidebar" style={{ display: isMobileView ? 'none' : 'block' }}>
+        <div id="sidebar" style={{ display: isMobileView ? 'none' : 'block', backgroundColor: 'white' }}>
           <Sidebar />
         </div>
 
-        <div style={{ marginLeft: '20px', marginTop: '70px' }}>
+        <div style={{ marginRight: '50px', marginTop: '70px', marginLeft: '50px'}}>
           <h1>Current Bill Details</h1>
           <p>
             The estimated amount of your current bill is ${currentBillAmount.toFixed(2)} and it's due on 06/10/2022.
           </p>
-          <button
-            style={{
-              padding: '10px',
-              backgroundColor: 'blue',
-              color: 'white',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              width: '100px',
-            }}
-          >
-            <Link to="/" className="no-underline-link" style={{ color: 'white' }}>
-              Pay
-            </Link>
+          <button className="submit-1X-small" type="submit"><Link to="/Pay" className='no-underline-link'>Pay</Link>
+            
           </button>
 
           <div style={{ marginTop: '20px' }}>
@@ -229,19 +221,7 @@ function Overview() {
                   />
                 </div>
               </div>
-              <button
-                onClick={handleDonePayment}
-                style={{
-                  padding: '10px',
-                  backgroundColor: 'blue',
-                  color: 'white',
-                  border: 'none',
-                  width: '100px',
-                  borderRadius: '5px',
-                  cursor: 'pointer',
-                  alignSelf: 'center',
-                }}
-              >
+              <button className="submit-1X-small" type="submit">
                 {editingIndex !== -1 ? 'Done' : 'Done'}
               </button>
             </div>
@@ -253,14 +233,7 @@ function Overview() {
               <p>{method.type}</p>
               <p>{method.number}</p>
               <button
-                onClick={() => handleEditPayment(index)}
-                style={{
-                  padding: '5px',
-                  backgroundColor: 'blue',
-                  color: 'white',
-                  border: 'none',
-                  cursor: 'pointer',
-                }}
+                className="submit-1X-small" type="submit"
               >
                 Edit Payment
               </button>
