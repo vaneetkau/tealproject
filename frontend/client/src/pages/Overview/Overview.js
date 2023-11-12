@@ -79,7 +79,7 @@ function Overview() {
 
   const dropdownLinks = [
     { label: 'Home', to: '/' },
-    { label: 'Latest News', to: '/LatestNews' },
+    { label: 'Latest News', to: '/News' },
     { label: 'Get Advise', to: '/LoanAdvice' },
     { label: 'Get Your Ease', to: '/LoanList' },
     { label: 'Settings', to: '/MyProfileSettings' },
