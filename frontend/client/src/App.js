@@ -15,9 +15,6 @@ import Statement from "./pages/Statement/Statement";
 import Pay from "./pages/Pay/Pay";
 import NewsList from "./components/NewsList";
 import LoanCalculator from "./components/LoanCal";
-import LoanAdvice from "./components/LoanAdvice/LoanAdvice";
-import LatestNews from "./components/LatestNews/LatestNews";
-
 
 const auth = getAuth(app);                                                                    //firebase authentication
 
@@ -59,8 +56,7 @@ function App() {
             <Route path="/LoanList" element={<LoanList/>} />
             <Route path="/NewsList" element={<NewsList newsType="loan-news"/>} />
             <Route path="/LoanCalculator" element={<LoanCalculator/>} />
-            <Route path="/LoanAdvice" element={<LoanAdvice/>} />
-            <Route path="/LatestNews" element={<LatestNews/>} />
+            
           
         </Routes>
           </div>
