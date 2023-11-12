@@ -233,7 +233,7 @@ function Overview() {
               <p>{method.type}</p>
               <p>{method.number}</p>
               <button
-                className="submit-1X-small" type="submit"
+                className="submit-1X-small" type="submit" onClick={() => handleEditPayment(index)
               >
                 Edit Payment
               </button>
