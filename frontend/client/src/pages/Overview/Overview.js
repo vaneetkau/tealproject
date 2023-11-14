@@ -102,7 +102,7 @@ function Overview() {
               right: '10px',
               zIndex: 999,
               padding: '10px',
-              backgroundColor: 'blue',
+              backgroundColor: '#2267CA',
               color: 'white',
               border: 'none',
               borderRadius: '5px',
