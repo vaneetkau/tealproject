@@ -13,7 +13,7 @@ const AboutPage = () => {
       <TextSection />
       <TextSection />
       <TextSection />
-	<TwoColumnSection />
+	  <TwoColumnSection />
       <Footer />
     </div>
   );

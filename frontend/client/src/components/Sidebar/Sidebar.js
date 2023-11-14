@@ -31,7 +31,7 @@ function Sidebar() {
       >
         { <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Latest News
+            {/* Latest News */}
           </Typography>
         </Toolbar> }
       </AppBar>
@@ -81,7 +81,7 @@ function Sidebar() {
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
       >
         <Toolbar />
-        <News/>
+        {/* <News/> */}
         
        
         

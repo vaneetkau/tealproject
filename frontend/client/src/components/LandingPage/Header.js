@@ -15,7 +15,7 @@ const Header = () => {
       </div>
       <div style={loginButtonStyle}>
         {' '}
-        <Link to="/Login">T&Login</Link>
+        <Link to="/LoginFromLandingPage">Login</Link>
       </div>
     </header>
   );

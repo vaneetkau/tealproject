@@ -3,7 +3,7 @@
   display:flex;
   max-height: 100vh;
   justify-content: end;
-  background-color: #2267CA;
+  /* background-color: #2267CA; */
 }
 
 .auth-form-container, .login-form, .register-form{
