@@ -221,8 +221,8 @@ function Overview() {
                   />
                 </div>
               </div>
-              <button className="submit-1X-small" type="submit">
-                {editingIndex !== -1 ? 'Done' : 'Done'}
+              <button className="submit-1X-small" type="submit" onClick={handleDonePayment}>
+                {editingIndex !== -1 ? 'Done' : 'Done' }
               </button>
             </div>
           </div>
@@ -233,7 +233,7 @@ function Overview() {
               <p>{method.type}</p>
               <p>{method.number}</p>
               <button
-                className="submit-1X-small" type="submit" onClick={() => handleEditPayment(index)
+                className="submit-1X-small" type="submit" onClick={() => handleEditPayment(index)}
               >
                 Edit Payment
               </button>
