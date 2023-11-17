@@ -22,6 +22,7 @@ import LoanCalculator from "./components/LoanCal";
 import Overview from "./pages/Overview/Overview";
 import NotFound from "./pages/NotFound/NotFound";
 
+
 const auth = getAuth(app);                                                                    //firebase authentication
 
 
