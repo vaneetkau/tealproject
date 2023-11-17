@@ -51,6 +51,7 @@ function Overview() {
     '@media (max-width: 500px)': {
       flexDirection: 'column',
       alignItems: 'center',
+    
     },
 
         
@@ -86,15 +87,42 @@ function Overview() {
     { label: 'Logout', to: '/' },
   ];
 
+  
+
   return (
     <div 
       style={{ 
-        display: 'flex', ...responsiveStyles, backgroundColor: 'white', alignItems: 'center' }}>
+        display: 'flex',
+         ...responsiveStyles, 
+         backgroundColor: 'white', 
+         justifyContent: 'center',
+         alignItems: 'center', 
+         minHeight: isMobileView ? 'auto' : '125vh',
+        
+         
+         
+          }}>
+            
 
-
-      {/* Hamburger menu button (visible in responsive view) */}
+      {/* Header for Mobile View */}
       {isMobileView && (
-        <>
+        <div
+          style={{
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            right: '0',
+            backgroundColor: '#2267CA',
+            color: 'white',
+            textAlign: 'center',
+            padding: '10px 0',
+            zIndex: '1000',
+            height: "60px"
+          }}
+        >
+          
+          
+          
           <button
             style={{
               position: 'fixed',
@@ -112,6 +140,15 @@ function Overview() {
           >
             ☰
           </button>
+        </div>
+  
+      )}
+
+
+      {/* Hamburger menu button (visible in responsive view) */}
+      {isMobileView && (
+        <>
+          
           {/* Conditional rendering for the dropdown menu */}
           {isDropdownOpen && (
             <div
@@ -146,25 +183,30 @@ function Overview() {
           <Sidebar />
         </div>
 
-        <div style={{ marginRight: '50px', marginTop: '130px', marginLeft: '50px'}}>
-          <h1>Current Bill Details</h1>
+        <div style={{ marginRight: '50px', marginTop: '340px', marginLeft: '50px', }}>
+        {isMobileView && <div style={{ height: '170px' }} />}
+        <h1>Overview</h1>
+
+          <h2 style={{ marginTop: '60px', marginBottom: '30px' }}>Current Bill Details</h2>
           <p>
             The estimated amount of your current bill is ${currentBillAmount.toFixed(2)} and it's due on 06/10/2022.
           </p>
-          <button className="submit-1X-small" type="submit"><Link to="/Pay" className='no-underline-link'>Pay</Link>
+          <button className="submit-1X-small" type="submit" style={{ marginBottom: '30px' }}><Link to="/Pay" className='no-underline-link'>Pay</Link>
             
           </button>
 
-          <div style={{ marginTop: '20px' }}>
-            <h2>{editingIndex !== -1 ? 'Edit Payment' : 'Edit Payment'}</h2>
+          <div style={{ marginTop: '20px', marginBottom: '60px' }}>
+            <h2 style={{ marginBottom: '50px' }}>{editingIndex !== -1 ? 'Edit Payment' : 'Edit Payment'}</h2>
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 border: '1px solid #ccc',
-                borderRadius: '5px',
+                borderRadius: '10px',
                 padding: '20px',
                 backgroundColor: '#f0f0f0',
+                boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.25)'
+                
               }}
             >
               <div style={{ marginBottom: '20px', display: 'flex', flexDirection: 'column' }}>
@@ -227,9 +269,9 @@ function Overview() {
             </div>
           </div>
 
-          <h2>Payment Methods</h2>
+          <h2 style={{ marginBottom: '50px' }}>Payment Methods</h2>
           {paymentMethods.map((method, index) => (
-            <div key={index} style={{ marginBottom: '10px', border: '1px solid #ccc', padding: '10px' }}>
+            <div key={index} style={{ marginBottom: '0px', border: '1px solid #ccc', padding: '10px', borderRadius: '10px', boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.25)' }}>
               <p>{method.type}</p>
               <p>{method.number}</p>
               <button
