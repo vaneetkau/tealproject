@@ -92,7 +92,11 @@ function Sidebar() {
           Product Description
         </Typography>
         {}
+
       </Box> */}
+
+      </Box>
+
     </Box>
   );
 }
