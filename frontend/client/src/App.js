@@ -105,15 +105,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <React.Fragment>
-                <Header />
-                <HeroSection />
-                <Footer />
-              </React.Fragment>
-            }
+          <Route path="/" element={ <HeroSection />}
           />
           <Route path='/Home' element={<Home/>} />
           <Route path="/about" element={<AboutPage />} />

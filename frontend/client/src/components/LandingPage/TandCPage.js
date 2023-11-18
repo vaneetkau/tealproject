@@ -31,7 +31,7 @@ const ImageSection = () => {
     position: 'relative', // Ensure relative positioning for text overlay
   };
   return (
-    <section className=" w-100 h-100 d-inline-block" style={imageSectionStyle}>
+    <section className=" w-100 h-25 d-inline-block" style={imageSectionStyle}>
       <h3 className="text-white">“Discover, Apply and Ease your Budget”</h3>
     </section>
   );

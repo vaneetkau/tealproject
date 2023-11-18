@@ -34,7 +34,7 @@ const ImageSection = () => {
   };
 
   return (
-    <section className=" w-100 h-100 d-inline-block" style={imageSectionStyle}>
+    <section className=" w-100 h-25 d-inline-block" style={imageSectionStyle}>
       <h3 className="text-white">“Discover, Apply and Ease your Budget”</h3>
     </section>
   );
@@ -153,7 +153,7 @@ const TwoColumnSection = () => {
   };
 
   return (
-    <section className=" w-69 h-100 d-inline-block" style={imageSectionStyle}>
+    <section className=" w-100 d-inline-block" style={imageSectionStyle}>
       <h3 className="text-white">“Discover, Apply and Ease your Budget”</h3>
     </section>
   );
