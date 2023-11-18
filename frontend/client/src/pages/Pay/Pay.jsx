@@ -4,7 +4,7 @@ import Sidebar from '../../components/Sidebar/Sidebar'
 
 const Pay = () => {
   return (
-    <div>
+    <div className='App'>
         <Sidebar/>
         <div className='container-rounded-upper-left-corner'>
             <h2>My Pay</h2>

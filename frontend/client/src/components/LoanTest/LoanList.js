@@ -27,21 +27,42 @@ function LoanList() {
     : loans.filter((loan) => loan.type === filterType);
 
   return (
-    <div>
-      <Sidebar/>
-      <h2>List of Loans</h2>
-      <div className="filter-buttons">
-        <button onClick={() => setFilterType('all')} className={filterType === 'all' ? 'active' : ''}>All</button>
-        <button onClick={() => setFilterType('loan')} className={filterType === 'loan' ? 'active' : ''}>Loans</button>
-        <button onClick={() => setFilterType('scholarship')} className={filterType === 'scholarship' ? 'active' : ''}>Scholarships</button>
+    <div className="App">
+      <div className="sidebar-div">
+        <Sidebar />
+      </div>{' '}
+      <div className="loanlist">
+        <h2>List of Loans</h2>
+        <div className="filter-buttons">
+          <button
+            onClick={() => setFilterType('all')}
+            className={filterType === 'all' ? 'active' : ''}
+          >
+            All
+          </button>
+          <button
+            onClick={() => setFilterType('loan')}
+            className={filterType === 'loan' ? 'active' : ''}
+          >
+            Loans
+          </button>
+          <button
+            onClick={() => setFilterType('scholarship')}
+            className={filterType === 'scholarship' ? 'active' : ''}
+          >
+            Scholarships
+          </button>
+        </div>
+        <ul>
+          {filteredLoans.map((loan) => (
+            <li key={loan._id}>
+              Type: {loan.type} | Career: {loan.career} | Institute:{' '}
+              {loan.institute} | Amount: ${loan.amount} | Term: {loan.loan_term}{' '}
+              months
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul>
-        {filteredLoans.map((loan) => (
-          <li key={loan._id}>
-            Type: {loan.type} | Career: {loan.career} | Institute: {loan.institute} | Amount: ${loan.amount} | Term: {loan.loan_term} months
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }

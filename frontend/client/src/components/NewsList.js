@@ -20,18 +20,22 @@ function NewsList({ newsType }) {
   }, [newsType]);
 
   return (
-    <div>
-      <Sidebar/>
-      <h2>List of {newsType} News</h2>
-      <ul>
-        {news.map((article) => (
-          <li key={article._id}>
-            <h3>{article.title}</h3>
-            <img src={article.image} alt={article.title} />
-            <p>{article.description}</p>
-          </li>
-        ))}
-      </ul>
+    <div className="App">
+      <div className="sidebar-div">
+        <Sidebar />
+      </div>{' '}
+      <div>
+        <h2>List of {newsType} News</h2>
+        <ul>
+          {news.map((article) => (
+            <li key={article._id}>
+              <h3>{article.title}</h3>
+              <img src={article.image} alt={article.title} />
+              <p>{article.description}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

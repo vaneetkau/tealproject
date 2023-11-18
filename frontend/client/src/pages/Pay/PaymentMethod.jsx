@@ -54,7 +54,7 @@ const PaymentMethod = () => {
     };
 
   return (
-    <div>
+    <div className='App'>
         <Sidebar/>
         <div className='container-rounded-upper-left-corner'>
             <h2>Payment Method</h2>

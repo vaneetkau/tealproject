@@ -41,48 +41,60 @@ function LoanCalculator() {
   };
 
   return (
-    <div>
-      <Sidebar/>
-      <h2>Loan Eligibility Calculator</h2>
-      <div>
-        <label>Monthly Income ($):</label>
-        <input
-          type="number"
-          value={income}
-          onChange={(e) => setIncome(e.target.value)}
-        />
-      </div>
-      {/* ... (Other input fields for expenses) */}
-      <button onClick={calculateEligibleAmount}>Calculate Eligible Loan Amount</button>
+    <div className="App">
+      {/* <div className="sidebar-div">
+        <Sidebar />
+      </div> */}
+      <div className="loan-calculator p-4">
+        <h2>Loan Eligibility Calculator</h2>
+        <form>
+          <div className="form-group">
+            <label>Monthly Income ($):</label>
+            <input
+              type="number"
+              className="form-control"
+              value={income}
+              onChange={(e) => setIncome(e.target.value)}
+            />
+          </div>
+          <button className="btn btn-primary" onClick={calculateEligibleAmount}>
+            Calculate Eligible Loan Amount
+          </button>
 
-      {loanAmount > 0 && (
-        <div>
-          <h3>Eligible Loan Amount: ${loanAmount}</h3>
-        </div>
-      )}
-      <hr />
-      <div>
-        <label>Loan Amount ($):</label>
-        <input
-          type="number"
-          value={loanAmount}
-          onChange={(e) => setLoanAmount(e.target.value)}
-        />
+          {loanAmount > 0 && (
+            <div className="alert alert-success">
+              <h3>Eligible Loan Amount: ${loanAmount}</h3>
+            </div>
+          )}
+          <hr />
+          <div className="form-group">
+            <label>Loan Amount ($):</label>
+            <input
+              type="number"
+              className="form-control"
+              value={loanAmount}
+              onChange={(e) => setLoanAmount(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
+            <label>Loan Duration (months):</label>
+            <input
+              type="number"
+              className="form-control"
+              value={loanDuration}
+              onChange={(e) => setLoanDuration(e.target.value)}
+            />
+          </div>
+          <button className="btn btn-primary" onClick={calculateMonthlyPayment}>
+            Calculate Monthly Payment
+          </button>
+          {monthlyPayment > 0 && (
+            <div className="alert alert-success">
+              <h3>Monthly Payment: ${monthlyPayment}</h3>
+            </div>
+          )}
+        </form>
       </div>
-      <div>
-        <label>Loan Duration (months):</label>
-        <input
-          type="number"
-          value={loanDuration}
-          onChange={(e) => setLoanDuration(e.target.value)}
-        />
-      </div>
-      <button onClick={calculateMonthlyPayment}>Calculate Monthly Payment</button>
-      {monthlyPayment > 0 && (
-        <div>
-          <h3>Monthly Payment: ${monthlyPayment}</h3>
-        </div>
-      )}
     </div>
   );
 }

@@ -161,7 +161,7 @@ function Overview() {
         </>
       )}
 
-      <div style={{ display: 'flex', ...responsiveStyles }}>
+      <div className='App' style={{ display: 'flex', ...responsiveStyles }}>
         {/* Sidebar */}
         <div
           id="sidebar"

@@ -19,6 +19,8 @@ import LoanCalculator from "./components/LoanCal";
 import Overview from "./pages/Overview/Overview";
 import NotFound from "./pages/NotFound/NotFound";
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
+import Home  from "./pages/Home/Home";
+import Main from "./components/LandingPage/main";
 
 const auth = getAuth(app);
 
@@ -43,13 +45,17 @@ function App() {
       <div className="App">
         <ErrorBoundary>
           <Routes>
-            {currentForm === "login" ? (
+            {currentForm === 'login' ? (
               <Route path="/" element={<Login onFormSwitch={toggleForm} />} />
             ) : (
-              <Route path="/" element={<Register onFormSwitch={toggleForm} />} />
+              <Route
+                path="/"
+                element={<Register onFormSwitch={toggleForm} />}
+              />
             )}
             {/* Define your other routes here */}
             <Route path="/Sidebar" element={<Sidebar />} />
+            <Route path="/Main" element={<Main/>}/>
             <Route path="/MyProfile" element={<MyProfile />} />
             <Route path="/MyProfileSettings" element={<MyProfileSettings />} />
             <Route path="/PaymentMethod" element={<PaymentMethod />} />
@@ -60,6 +66,8 @@ function App() {
             <Route path="/LoanCalculator" element={<LoanCalculator />} />
             <Route path="/LoanAdvice" element={<LoanCalculator />} />
             <Route path="/Overview" element={<Overview />} />
+            <Route path="/Home" element={<Home />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </ErrorBoundary>
