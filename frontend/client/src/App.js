@@ -16,8 +16,6 @@ import Pay from "./pages/Pay/Pay";
 
 const auth = getAuth(app);                                                                    //firebase authentication
 
-
-
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
 
@@ -34,30 +32,30 @@ function App() {
   }
 
   return (
-
-    <>
-      <Router>
-        
-        
-        <div className="App">
-        <Routes>
-          { currentForm === "login" ? (
-            <Route path="/" element={<Login onFormSwitch={toggleForm} />} />
-          ) : (
-            <Route path="/" element={<Register onFormSwitch={toggleForm} />} />
-          )}
-            <Route path="/Sidebar" element={<Sidebar/>} />
-            <Route path="/MyProfile" element={<MyProfile/>} />
-            <Route path="/MyProfileSettings" element={<MyProfileSettings/>} />
-            <Route path="/PaymentMethod" element={<PaymentMethod/>} />
-            <Route path="/Statement" element={<Statement/>} />
-            <Route path="/Pay" element={<Pay/>} />
-          
-        </Routes>
-          </div>
-      </Router>
-    </>
-
+    <Router>
+        <ErrorBoundary>
+          <Routes>
+            {currentForm === "login" ? (
+              <Route path="/" element={<Login onFormSwitch={toggleForm} />} />
+            ) : (
+              <Route path="/" element={<Register onFormSwitch={toggleForm} />} />
+            )}
+            {/* Define your other routes here */}
+            <Route path="/Sidebar" element={<Sidebar />} />
+            <Route path="/MyProfile" element={<MyProfile />} />
+            <Route path="/MyProfileSettings" element={<MyProfileSettings />} />
+            <Route path="/PaymentMethod" element={<PaymentMethod />} />
+            <Route path="/Statement" element={<Statement />} />
+            <Route path="/Pay" element={<Pay />} />
+            <Route path="/LoanList" element={<LoanList />} />
+            <Route path="/News" element={<News newsType="loan-news" />} />
+            <Route path="/LoanCalculator" element={<LoanCalculator />} />
+            <Route path="/LoanAdvice" element={<LoanCalculator />} />
+            <Route path="/Overview" element={<Overview />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </ErrorBoundary>
+    </Router>
   );
 }
 
