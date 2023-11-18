@@ -1,6 +1,7 @@
 // Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Login from '../UserAuthentication/Login';
 // import './HeaderSection.css'
 
 const Header = () => {
@@ -26,7 +27,7 @@ const Header = () => {
       </div>
       <div style={loginButtonStyle}>
         {' '}
-        <Link to="/LoginFromLandingPage" className="btn btn-lg btn-primary rounded-pill">
+        <Link to="/Login" className="btn btn-lg btn-primary rounded-pill">
           {' '}
           Login{' '}
         </Link>

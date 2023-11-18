@@ -80,6 +80,7 @@ import FaqPage from './components/LandingPage/FaqPage';
 import TandCPage from './components/LandingPage/TandCPage';
 import Contact from './components/LandingPage/Contact';
 import Login from './components/UserAuthentication/Login';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
@@ -96,6 +97,7 @@ function App() {
               </React.Fragment>
             }
           />
+          <Route path='/Home' element={<Home/>} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/FaqPage" element={<FaqPage />} />
           <Route path="/TandCPage" element={<TandCPage />} />

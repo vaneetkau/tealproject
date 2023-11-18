@@ -2,7 +2,18 @@
 import React from 'react';
 import './HeroSection.css'
 import HeroSectionImg from './Hero-image.png'
+import { useNavigate } from 'react-router-dom';
+import Login from '../../../src/components/UserAuthentication/Login';
+
 const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Login")
+    navigate("/Login")    
+};
+
   return (
     <section className="hero">
       <div className="left-column">
@@ -14,7 +25,7 @@ const HeroSection = () => {
           Don’t Know how? Don’t Worry, we got you! begin your Journey today and
           don’t miss any opportunity to get a loan or scholarship again!
         </p>
-        <button type='button' className='btn btn-warning'>Begin Today!</button>
+        <button type='submit' onClick={handleSubmit} className='btn btn-warning'>Begin Today!</button>
       </div>
       <div className="right-column">
         <img
