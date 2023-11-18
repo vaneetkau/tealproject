@@ -91,6 +91,7 @@ import loanEaseLogo from "../../LoanEaseLogo-White.png";
 
 import Button from "react-bootstrap/Button";
 import Home from "../../pages/Home/Home";
+import Register from "./Register";
 
 const auth = getAuth(app);
 
@@ -216,7 +217,7 @@ function Login(props) {
                 Don't have an account?{" "}
                 <label
                   className="link-txt"
-                  onClick={() => props.onFormSwitch("register")}
+                  onClick={() => props.onFormSwitch("Register")}
                   style={{
                     color: "#FFB700",
                     fontSize: "13px",

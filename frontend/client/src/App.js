@@ -70,7 +70,10 @@
 
 
 // App.js
-import React from 'react';
+import React, { useState } from "react";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";                      //firebase authentication
+import { app } from './firebase'                                                              //firebase
+import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/LandingPage/Header';
 import HeroSection from './components/LandingPage/HeroSection';
@@ -80,9 +83,24 @@ import FaqPage from './components/LandingPage/FaqPage';
 import TandCPage from './components/LandingPage/TandCPage';
 import Contact from './components/LandingPage/Contact';
 import Login from './components/UserAuthentication/Login';
+import Register from "./components/UserAuthentication/Register"
 import Home from './pages/Home/Home';
 
 function App() {
+  const [currentForm, setCurrentForm] = useState('login');
+  const auth = getAuth(app);                                                                    //firebase authentication
+
+  const toggleForm = (forName) => {
+    setCurrentForm(forName);
+  }
+  const signupPgae = () => {
+    createUserWithEmailAndPassword(
+      auth, 
+      "Noyal Godara",
+      "noyal@xyz.com",
+      "6789@noyal"
+    ).then((value) => console.log(value));
+  }
   return (
     <Router>
       <div className="App">
