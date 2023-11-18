@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Sidebar from '../Sidebar/Sidebar';
 //test
 
 
@@ -27,6 +28,7 @@ function LoanList() {
 
   return (
     <div>
+      <Sidebar/>
       <h2>List of Loans</h2>
       <div className="filter-buttons">
         <button onClick={() => setFilterType('all')} className={filterType === 'all' ? 'active' : ''}>All</button>

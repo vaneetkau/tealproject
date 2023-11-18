@@ -14,6 +14,11 @@ import PaymentMethod from "./pages/Pay/PaymentMethod";
 import Statement from "./pages/Statement/Statement";
 import Pay from "./pages/Pay/Pay";
 
+import NewsList from "./components/NewsList";
+import LoanCalculator from "./components/LoanCal";
+
+
+
 const auth = getAuth(app);                                                                    //firebase authentication
 
 
@@ -38,7 +43,7 @@ function App() {
     <>
       <Router>
         
-        
+
         <div className="App">
         <Routes>
           { currentForm === "login" ? (
@@ -52,6 +57,11 @@ function App() {
             <Route path="/PaymentMethod" element={<PaymentMethod/>} />
             <Route path="/Statement" element={<Statement/>} />
             <Route path="/Pay" element={<Pay/>} />
+
+            <Route path="/LoanList" element={<LoanList/>} />
+            <Route path="/NewsList" element={<NewsList newsType="loan-news"/>} />
+            <Route path="/LoanCalculator" element={<LoanCalculator/>} />
+
           
         </Routes>
           </div>

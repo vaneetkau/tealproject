@@ -24,11 +24,11 @@ function Sidebar() {
         position="fixed"
         sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
       >
-        <Toolbar>
+        {/* <Toolbar>
           <Typography variant="h6" noWrap component="div">
             Latest News
           </Typography>
-        </Toolbar>
+        </Toolbar> */}
       </AppBar>
 
       <Drawer
@@ -71,7 +71,7 @@ function Sidebar() {
           ))}
         </List>
       </Drawer>
-      <Box
+      {/* <Box
         component="main"
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
       >
@@ -92,7 +92,11 @@ function Sidebar() {
           Product Description
         </Typography>
         {}
+
+      </Box> */}
+
       </Box>
+
     </Box>
   );
 }

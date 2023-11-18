@@ -1,11 +1,39 @@
 
-import React from 'react'
+
+import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import PaymentMethod from '../Pay/PaymentMethod'
 
 
 const Statement = () => {
+
+    const [statements] = useState([]);
+  const [displayMode, setDisplayMode] = useState('current'); // 'current' or 'past'
+
+  const handlePayClick = (statement) => {
+    // Implement the logic to process a payment for the given statement.
+    // You can use statement information to perform the payment.
+    console.log('Payment clicked for statement:', statement);
+  };
+
+  const handleDownloadClick = (statement) => {
+    // Implement the logic to download the statement.
+    // You can use statement information to generate the download.
+    console.log('Download clicked for statement:', statement);
+  };
+
+  const handleAddPaymentMethodsClick = () => {
+    // Implement the logic to add payment methods.
+    console.log('Add payment methods clicked');
+  };
+
+  const handleEditPaymentMethodsClick = () => {
+    // Implement the logic to edit payment methods.
+    console.log('Edit payment methods clicked');
+  };
+
   return (
     <div>
         <Sidebar/>
@@ -65,8 +93,9 @@ const Statement = () => {
   )
 }
 
+
 export default Statement
-=======
+
 // Statement.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -145,3 +174,4 @@ function Statement() {
 }
 
 export default Statement;
+
