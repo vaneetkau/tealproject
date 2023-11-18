@@ -2,6 +2,8 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer'
+import blueBannerImage from './blue-banner.png';
+import girlBannerImg from './girl-banner.png'
 
 const AboutPage = () => {
   return (
@@ -10,9 +12,9 @@ const AboutPage = () => {
       <ImageSection />
       <TextSection />
       <IconSection />
-      <TextSection />
-      <TextSection />
-      <TextSection />
+      <TextSection1 />
+      <TextSection2 />
+      <TextSection3 />
 	  <TwoColumnSection />
       <Footer />
     </div>
@@ -20,19 +22,91 @@ const AboutPage = () => {
 };
 
 const ImageSection = () => {
+  const imageSectionStyle = {
+    textAlign: 'center',
+    padding: '2rem',
+    backgroundColor: '#e0e0e0',
+    backgroundImage: `url(${blueBannerImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '300px', // Set your preferred height for the section
+    position: 'relative', // Ensure relative positioning for text overlay
+  };
+
   return (
-    <section style={imageSectionStyle}>
-      <img src="path/to/small/image.jpg" alt="Description" style={imageStyle} />
-	  <h3>“Discover, Apply and Ease your Budget”</h3>
+    <section className=" w-100 h-100 d-inline-block" style={imageSectionStyle}>
+      <h3 className="text-white">“Discover, Apply and Ease your Budget”</h3>
     </section>
   );
 };
 
+
 const TextSection = () => {
   return (
     <section style={textSectionStyle}>
-      <h2>Our Story</h2>
-      <p>Place your paragraph text here.</p>
+      <div className=" w-100 h-100 d-inline-block">
+        <h2>How to do it?</h2>
+      </div>
+    </section>
+  );
+};
+const TextSection1 = () => {
+  return (
+    <section style={textSectionStyle}>
+      <div className=" w-100 h-100 d-inline-block">
+        <h2>Who are we?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus,
+          nunc ac faucibus porttitor, sem felis maximus est, eget aliquam augue
+          nisl id ex. Etiam sollicitudin quis purus eu iaculis. Vestibulum
+          turpis dolor, commodo ut finibus in, vestibulum nec velit. Aenean
+          varius vel arcu ut malesuada. Praesent vulputate in nisi vel
+          elementum. Pellentesque nec nisl elementum, porta tellus ac, porttitor
+          libero. Nam augue orci, rhoncus a fringilla sit amet, dictum non odio.
+          Aliquam sollicitudin odio tellus. Quisque imperdiet elit vel libero
+          pharetra, non vulputate est interdum.
+        </p>
+      </div>
+    </section>
+  );
+};
+const TextSection2 = () => {
+  return (
+    <section style={textSectionStyle}>
+      <div className=" w-100 h-100 d-inline-block">
+        <h2>What We Do?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus,
+          nunc ac faucibus porttitor, sem felis maximus est, eget aliquam augue
+          nisl id ex. Etiam sollicitudin quis purus eu iaculis. Vestibulum
+          turpis dolor, commodo ut finibus in, vestibulum nec velit. Aenean
+          varius vel arcu ut malesuada. Praesent vulputate in nisi vel
+          elementum. Pellentesque nec nisl elementum, porta tellus ac, porttitor
+          libero. Nam augue orci, rhoncus a fringilla sit amet, dictum non odio.
+          Aliquam sollicitudin odio tellus. Quisque imperdiet elit vel libero
+          pharetra, non vulputate est interdum.
+        </p>
+      </div>
+    </section>
+  );
+};
+const TextSection3 = () => {
+  return (
+    <section style={textSectionStyle}>
+      <div className=" w-100 h-100 d-inline-block">
+        <h2>Our Core Values?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus,
+          nunc ac faucibus porttitor, sem felis maximus est, eget aliquam augue
+          nisl id ex. Etiam sollicitudin quis purus eu iaculis. Vestibulum
+          turpis dolor, commodo ut finibus in, vestibulum nec velit. Aenean
+          varius vel arcu ut malesuada. Praesent vulputate in nisi vel
+          elementum. Pellentesque nec nisl elementum, porta tellus ac, porttitor
+          libero. Nam augue orci, rhoncus a fringilla sit amet, dictum non odio.
+          Aliquam sollicitudin odio tellus. Quisque imperdiet elit vel libero
+          pharetra, non vulputate est interdum.
+        </p>
+      </div>
     </section>
   );
 };
@@ -40,42 +114,49 @@ const TextSection = () => {
 const IconSection = () => {
   return (
     <section style={iconSectionStyle}>
-      <div style={iconStyle}>Icon 1</div>
-      <div style={iconStyle}>Icon 2</div>
-      <div style={iconStyle}>Icon 3</div>
-      <div style={iconStyle}>Icon 4</div>
+      <div className=" w-100 mh-100 d-inline-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm" style={iconStyle}>
+              One of three columns
+              <p>Look for the loan or scholarship that best suits you</p>
+            </div>
+            <div class="col-sm" style={iconStyle}>
+              One of three columns
+              <p>Select and get all the information</p>
+            </div>
+            <div class="col-sm" style={iconStyle}>
+              One of three columns
+              <p>Fill the application letter </p>
+            </div>
+            <div class="col-sm" style={iconStyle}>
+              One of three columns
+              <p>Wait for the reply!</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
 
 const TwoColumnSection = () => {
+  const imageSectionStyle = {
+    textAlign: 'center',
+    padding: '2rem',
+    backgroundColor: '#e0e0e0',
+    backgroundImage: `url(${girlBannerImg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '500px', // Set your preferred height for the section
+    position: 'relative', // Ensure relative positioning for text overlay
+  };
+
   return (
-    <section style={sectionStyle}>
-      <div style={leftColumnStyle}>
-        <h3>Left Column</h3>
-        <p>Your left column content goes here.</p>
-      </div>
-      <div style={rightColumnStyle}>
-        <img
-          src="path/to/your/image.jpg"
-          alt="Description"
-          style={columnImageStyle}
-        />
-      </div>
+    <section className=" w-69 h-100 d-inline-block" style={imageSectionStyle}>
+      <h3 className="text-white">“Discover, Apply and Ease your Budget”</h3>
     </section>
   );
-};
-
-// Styles
-const imageSectionStyle = {
-  textAlign: 'center',
-  padding: '2rem',
-  backgroundColor: '#e0e0e0',
-};
-
-const imageStyle = {
-  maxWidth: '100%',
-  height: 'auto',
 };
 
 const textSectionStyle = {
@@ -108,17 +189,11 @@ const sectionStyle = {
   backgroundColor: '#f0f0f0',
 };
 
-const leftColumnStyle = {
-  flex: '0 0 70%',
-};
-
-const rightColumnStyle = {
-  flex: '0 0 30%',
-};
-
-const columnImageStyle = {
-  maxWidth: '100%',
-  height: 'auto',
+const containerStyle = {
+  maxWidth: '400px', // Adjust the maximum width of the container
+  margin: '0 auto', // Center the container horizontally
+  border: '1px solid #ccc',
+  padding: '20px',
 };
 // Add responsive styles
 const responsiveStyles = {

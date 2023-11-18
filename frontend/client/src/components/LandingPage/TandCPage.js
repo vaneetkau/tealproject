@@ -2,6 +2,8 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import blueBannerImage from './blue-banner.png';
+
 
 const TandCPage = () => {
   return (
@@ -18,13 +20,23 @@ const TandCPage = () => {
 };
 
 const ImageSection = () => {
+  const imageSectionStyle = {
+    textAlign: 'center',
+    padding: '2rem',
+    backgroundColor: '#e0e0e0',
+    backgroundImage: `url(${blueBannerImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '300px', // Set your preferred height for the section
+    position: 'relative', // Ensure relative positioning for text overlay
+  };
   return (
-    <section style={imageSectionStyle}>
-      <img src="path/to/small/image.jpg" alt="Description" style={imageStyle} />
-      <h3>“Discover, Apply and Ease your Budget”</h3>
+    <section className=" w-100 h-100 d-inline-block" style={imageSectionStyle}>
+      <h3 className="text-white">“Discover, Apply and Ease your Budget”</h3>
     </section>
   );
 };
+
 
 const TextSection = () => {
   return (
@@ -51,19 +63,23 @@ const TextSection2 = () => {
       <h2>Our Policies</h2>
       <p>
         {' '}
-        <a> Place your paragraph text here.</a>{' '}
+        <a> Registration</a>{' '}
       </p>
       <p>
         {' '}
-        <a> Place your paragraph text here.</a>{' '}
+        <a> Termination of Registarion</a>{' '}
       </p>{' '}
       <p>
         {' '}
-        <a> Place your paragraph text here.</a>{' '}
+        <a> Disclaimer of Liability</a>{' '}
       </p>
       <p>
         {' '}
-        <a> Place your paragraph text here.</a>{' '}
+        <a> Third Party Advertisement</a>{' '}
+      </p>
+      <p>
+        {' '}
+        <a> User Information and Content</a>{' '}
       </p>
       <br />
     </section>
@@ -73,16 +89,13 @@ const TextSection2 = () => {
 const TwoColumnSection = () => {
   return (
     <section style={sectionStyle}>
-      <div style={leftColumnStyle}>
-        <h3>Left Column</h3>
-        <p>Your left column content goes here.</p>
-      </div>
-      <div style={rightColumnStyle}>
-        <img
-          src="path/to/your/image.jpg"
-          alt="Description"
-          style={columnImageStyle}
-        />
+      <div style={containerStyle}>
+        <h2>Heading</h2>
+        <div>
+          <button type="button" className="btn btn-orange">
+            Button
+          </button>
+        </div>
       </div>
     </section>
   );
@@ -114,18 +127,13 @@ const sectionStyle = {
   backgroundColor: '#f0f0f0',
 };
 
-const leftColumnStyle = {
-  flex: '0 0 70%',
+const containerStyle = {
+  maxWidth: '400px', // Adjust the maximum width of the container
+  margin: '0 auto', // Center the container horizontally
+  border: '1px solid #ccc',
+  padding: '20px',
 };
 
-const rightColumnStyle = {
-  flex: '0 0 30%',
-};
-
-const columnImageStyle = {
-  maxWidth: '100%',
-  height: 'auto',
-};
 // Add responsive styles
 const responsiveStyles = {
   headerStyle: {

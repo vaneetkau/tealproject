@@ -1,11 +1,12 @@
 // Hero.js
 import React from 'react';
-
+import './HeroSection.css'
+import HeroSectionImg from './Hero-image.png'
 const HeroSection = () => {
   return (
-    <section style={heroStyle}>
-      <div style={leftColumnStyle}>
-        <h1>
+    <section className="hero">
+      <div className="left-column">
+        <h1 className="text-primary">
           Get help to ease your studies, Just Discover, Apply and Ease your
           budget!
         </h1>
@@ -13,19 +14,18 @@ const HeroSection = () => {
           Don’t Know how? Don’t Worry, we got you! begin your Journey today and
           don’t miss any opportunity to get a loan or scholarship again!
         </p>
-        <button>Begin Today!</button>
+        <button type='button' className='btn btn-warning'>Begin Today!</button>
       </div>
-      <div style={rightColumnStyle}>
+      <div className="right-column">
         <img
-          src="../../Hero-image.png"
+          src={HeroSectionImg}
           alt="Description"
-          style={imageStyle}
+          className="hero-image"
         />
       </div>
     </section>
   );
 };
-
 const heroStyle = {
   display: 'flex',
   justifyContent: 'center',

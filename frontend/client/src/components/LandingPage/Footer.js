@@ -12,7 +12,7 @@ const Footer = () => {
 const footerStyle = {
   textAlign: 'center',
   padding: '1rem',
-  backgroundColor: '#333',
+  backgroundColor: '#A2C8FF',
   color: '#fff',
 };
 

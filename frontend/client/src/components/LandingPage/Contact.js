@@ -2,6 +2,8 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+
 
 const Contact = () => {
   return (
@@ -15,78 +17,58 @@ const Contact = () => {
 
 const ContactSection = () => {
   return (
-    <section style={sectionStyle}>
-      <div style={leftColumnStyle}>
-        <h1>Contact Us</h1>
-        <p>Your contact information goes here.</p>
-        <img
-          src="path/to/your/image.jpg"
-          alt="Description"
-          style={imageStyle}
-        />
-      </div>
-      <div style={rightColumnStyle}>
-        <ContactForm />
-      </div>
-    </section>
+    <Container fluid style={{ height: '100vh', backgroundColor:'#F4F4F4' }}>
+      <Row>
+        <Col>
+          <h1>Let's Talk</h1>
+          <p>
+            Don’t worry, ask us any question about our service, fill all the
+            blanks and our team wi’ll reach out after reviewing your inquiry!
+          </p>
+          <img
+            src="path/to/your/image.jpg"
+            alt="Description"
+          />
+        </Col>
+        <Col>
+          <ContactForm />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
 const ContactForm = () => {
   return (
-    <form style={formStyle}>
-      <label>
-        Name:
-        <input type="text" name="name" />
-      </label>
-      <label>
-        Contact:
-        <input type="text" name="contact" />
-      </label>
-      <label>
-        Location:
-        <input type="text" name="location" />
-      </label>
-      <label>
-        Inquiry:
-        <input type="text" name="inquiry" />
-      </label>
-      <label>
-        Message:
-        <textarea name="message" />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+    <Form>
+      <Form.Group controlId="formBasicName">
+        <Form.Label>How we can contact you?</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+      </Form.Group>
+
+      <Form.Group controlId="formBasicEmail">
+        <Form.Label>How we can contact you?</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group controlId="formBasicLocation">
+        <Form.Label>Where are you Located?</Form.Label>
+        <Form.Control type="text" placeholder="Enter Location" />
+      </Form.Group>
+
+      <Form.Group controlId="formBasicTopic">
+        <Form.Label>What is your Inquiry About?</Form.Label>
+        <Form.Control type="text" placeholder="Enter your Topic" />
+      </Form.Group>
+
+      <Button className='btn btn-lg btn-primary p-4 m-4 ' variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
   );
-};
-
-// Styles
-const sectionStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  padding: '2rem',
-  backgroundColor: '#f0f0f0',
-};
-
-const leftColumnStyle = {
-  flex: '0 0 40%',
-};
-
-const rightColumnStyle = {
-  flex: '0 0 60%',
-};
-
-const imageStyle = {
-  maxWidth: '100%',
-  height: 'auto',
-};
-
-const formStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  maxWidth: '400px', // Adjust the width as needed
-  margin: '0 auto',
 };
 
 export default Contact;

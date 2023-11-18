@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import blueBannerImage from './blue-banner.png';
 
 const FaqPage = () => {
   return (
@@ -19,10 +20,19 @@ const FaqPage = () => {
 };
 
 const ImageSection = () => {
+    const imageSectionStyle = {
+      textAlign: 'center',
+      padding: '2rem',
+      backgroundColor: '#e0e0e0',
+      backgroundImage: `url(${blueBannerImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      height: '300px', // Set your preferred height for the section
+      position: 'relative', // Ensure relative positioning for text overlay
+    };
   return (
-    <section style={imageSectionStyle}>
-      <img src="path/to/small/image.jpg" alt="Description" style={imageStyle} />
-      <h3>“Discover, Apply and Ease your Budget”</h3>
+    <section className=" w-100 h-100 d-inline-block" style={imageSectionStyle}>
+      <h3 className="text-white">“Discover, Apply and Ease your Budget”</h3>
     </section>
   );
 };

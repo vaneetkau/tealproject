@@ -1,21 +1,35 @@
 // Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import './HeaderSection.css'
 
 const Header = () => {
   return (
     <header style={headerStyle}>
       <div style={logoStyle}>Logo</div>
       <div style={navLinksStyle}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/Contact">Contact</Link>
-        <Link to="/FaqPage">FAQ</Link>
-        <Link to="/TandCPage">T&C</Link>
+        <Link to="/" style={linkStyle}>
+          Home
+        </Link>
+        <Link to="/about" style={linkStyle}>
+          About
+        </Link>
+        <Link to="/Contact" style={linkStyle}>
+          Contact
+        </Link>
+        <Link to="/FaqPage" style={linkStyle}>
+          FAQ
+        </Link>
+        <Link to="/TandCPage" style={linkStyle}>
+          T&C
+        </Link>
       </div>
       <div style={loginButtonStyle}>
         {' '}
-        <Link to="/LoginFromLandingPage">Login</Link>
+        <Link to="/LoginFromLandingPage" className="btn btn-lg btn-primary rounded-pill">
+          {' '}
+          Login{' '}
+        </Link>
       </div>
     </header>
   );
@@ -26,7 +40,7 @@ const headerStyle = {
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: '1rem',
-  backgroundColor: '#f0f0f0',
+  backgroundColor: '#F4F4F4',
 };
 
 const logoStyle = {
@@ -37,6 +51,13 @@ const navLinksStyle = {
   flex: 2,
   display: 'flex',
   justifyContent: 'center',
+  color: '#000000',
+};
+
+const linkStyle = {
+  marginRight: '1rem',
+  textDecoration: 'none',
+  color: '#000',
 };
 
 const loginButtonStyle = {
