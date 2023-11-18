@@ -34,7 +34,7 @@ function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link to="/get-advise">
+          <Link to="/LoanList">
             <EventNoteIcon />
             Get Advise
           </Link>

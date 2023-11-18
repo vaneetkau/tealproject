@@ -4,10 +4,9 @@ body {
  font-family: Arial, sans-serif;
 }
 
-/* .App {
- display: flex;
- height: 100vh;
-} */
+.App {
+ width: 100vh;
+}
 
 .sidebar {
  background-color: #1f0dac;
