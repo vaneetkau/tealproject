@@ -24,6 +24,7 @@ const auth = getAuth(app);
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
+  const auth = getAuth(app);                                                                    //firebase authentication
 
   const toggleForm = (forName) => {
     setCurrentForm(forName);
@@ -37,35 +38,26 @@ function App() {
       "6789@noyal"
     ).then((value) => console.log(value));
   }
-
   return (
     <Router>
       <div className="App">
-        <ErrorBoundary>
-          <Routes>
-            {currentForm === "login" ? (
-              <Route path="/" element={<Login onFormSwitch={toggleForm} />} />
-            ) : (
-              <Route path="/" element={<Register onFormSwitch={toggleForm} />} />
-            )}
-            {/* Define your other routes here */}
-            <Route path="/Sidebar" element={<Sidebar />} />
-            <Route path="/MyProfile" element={<MyProfile />} />
-            <Route path="/MyProfileSettings" element={<MyProfileSettings />} />
-            <Route path="/PaymentMethod" element={<PaymentMethod />} />
-            <Route path="/Statement" element={<Statement />} />
-            <Route path="/Pay" element={<Pay />} />
-            <Route path="/LoanList" element={<LoanList />} />
-            <Route path="/News" element={<News newsType="loan-news" />} />
-            <Route path="/LoanCalculator" element={<LoanCalculator />} />
-            <Route path="/LoanAdvice" element={<LoanCalculator />} />
-            <Route path="/Overview" element={<Overview />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+
+                      <ErrorBoundary>
+        <Routes>
+
+          <Route path="/" element={ <HeroSection />}
+          />
+          <Route path='/Home' element={<Home/>} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/FaqPage" element={<FaqPage />} />
+          <Route path="/TandCPage" element={<TandCPage />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Login" element={<Login />} />
+        </Routes>
         </ErrorBoundary>
       </div>
     </Router>
   );
 }
-
 export default App;
+

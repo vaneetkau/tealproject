@@ -12,7 +12,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import News from '../News/News';
 import Button from '@mui/material/Button';
+import LatestNews from '../LatestNews/LatestNews';
+import FinancialContent from '../FinancialContent/FinancialContent';
+import BankingSuggestion from '../BankingSuggestions/BankingSuggestions';
+import LoanAdvice from '../LoanAdvice/LoanAdvice';
 
 const drawerWidth = 240;
 
@@ -24,11 +29,11 @@ function Sidebar() {
         position="fixed"
         sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
       >
-        {/* <Toolbar>
+        { <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Latest News
+            {/* Latest News */}
           </Typography>
-        </Toolbar> */}
+        </Toolbar> }
       </AppBar>
 
       <Drawer
@@ -71,28 +76,20 @@ function Sidebar() {
           ))}
         </List>
       </Drawer>
-      {/* <Box
+      { <Box
         component="main"
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
       >
         <Toolbar />
+        {/* <News/> */}
+        
+       
+        
+       
+      </Box> }
 
-        <Typography paragraph>
-          Lorem ipsum, or lipsum as it is sometimes known
-        </Typography>
-        <Typography paragraph>
-          Apply For A Loan Or Scholarship
-        </Typography>
 
-        <Button variant="contained" color="success">
-          Our Services
-        </Button>
-        <br /><br /><br />
-        <Typography paragraph>
-          Product Description
-        </Typography>
-        {}
-      </Box> */}
+
     </Box>
   );
 }

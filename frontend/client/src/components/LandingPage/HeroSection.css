@@ -1,0 +1,30 @@
+body, html {
+ margin: 0;
+ padding: 0;
+ height: 100%;
+}
+
+.hero {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 2rem;
+ background-color: #e0e0e0;
+ height: 100vh; /* vh stands for viewport height */
+}
+
+.left-column {
+ flex: 1;
+ margin-right: 2rem;
+ text-align: center;
+}
+
+.right-column {
+ flex: 1;
+ text-align: center;
+}
+
+.hero-image {
+ max-width: 100%;
+ height: auto;
+}
