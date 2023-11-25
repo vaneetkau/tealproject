@@ -19,7 +19,7 @@ const BankingSuggestion = () => {
 
   return (
     <>
-    <h1 className="text-Left my-3">Banking Suggestion</h1>
+    <h1 className="text-Left my-3 headingcss">Banking Suggestion</h1>
           <div className="mainDiv">
       {mynews.map((ele) => {
         console.log(ele)

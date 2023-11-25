@@ -10,6 +10,9 @@ function LoanList() {
   const [loans, setLoans] = useState([]);
   const [filterType, setFilterType] = useState('all'); // Default: show all loans
 
+  const handleFilterChange = (type) => {
+    setFilterType(type);
+  };
   useEffect(() => {
 
     axios.get('http://localhost:4000/api/loans')
@@ -34,35 +37,29 @@ function LoanList() {
         </div>
         <div className="col-lg-10 col-md-9">
                 <h2>List of Loans</h2>
-      <div className="filter-buttons">
+     <div className="btn-group" role="group" aria-label="Filter loans">
         <button
-          onClick={() => setFilterType('all')}
-          className={filterType === 'all' ? 'active' : ''}
+          type="button"
+          className={`btn ${filterType === 'all' ? 'btn-primary' : 'btn-outline-primary'}`}
+          onClick={() => handleFilterChange('all')}
         >
           All
         </button>
         <button
-          onClick={() => setFilterType('loan')}
-          className={filterType === 'loan' ? 'active' : ''}
+          type="button"
+          className={`btn ${filterType === 'loan' ? 'btn-primary' : 'btn-outline-primary'}`}
+          onClick={() => handleFilterChange('loan')}
         >
           Loans
         </button>
         <button
-          onClick={() => setFilterType('scholarship')}
-          className={filterType === 'scholarship' ? 'active' : ''}
+          type="button"
+          className={`btn ${filterType === 'scholarship' ? 'btn-primary' : 'btn-outline-primary'}`}
+          onClick={() => handleFilterChange('scholarship')}
         >
           Scholarships
         </button>
       </div>
-      {/* <ul>
-        {filteredLoans.map((loan) => (
-          <li key={loan._id}>
-            Type: {loan.type} | Career: {loan.career} | Institute:{' '}
-            {loan.institute} | Amount: ${loan.amount} | Term: {loan.loan_term}{' '}
-            months
-          </li>
-        ))}
-      </ul> */}
       <div className="container mt-5">
         <h2>Find the Ease that Suits you!</h2>
         <div className="table-responsive">

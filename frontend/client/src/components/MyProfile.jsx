@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import loanEaseLogo from "../LoanEaseLogo-White.png";
 import user from "../User.png";
 import MyProfileSettings from "./MyProfileSettings";
-import PaymentMethod from "../pages/Pay/PaymentMethod";
-import Statement from "../pages/Statement/Statement";
-import Pay from "../pages/Pay/Pay";
+import PaymentMethod from "./Pay/PaymentMethod";
+import Pay from "./Pay/Pay";
 import LoanList from "./LoanTest/LoanList";
 import NewsList from "./NewsList";
 

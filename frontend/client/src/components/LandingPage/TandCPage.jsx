@@ -43,18 +43,10 @@ const TextSection = () => {
  <div className="container-fluid text-left" style={{ backgroundColor: '#F4F4F4' }}>
       <div className="row">
         <div className="col">
-          <h1 className="text-left mb-4">Applying</h1>
-          <ul className="list-unstyled">
-            <li>
-              <a href="#" className="text-left d-block mb-2">How to apply to schoraships?</a>
-            </li>
-            <li>
-              <a href="#" className="text-left d-block mb-2">How to apply to Loans?</a>
-            </li>
-            <li>
-              <a href="#" className="text-left d-block mb-2">How to apply to Loans?</a>
-            </li>
-          </ul>
+          <h1 className="text-left mb-4">What are Terms and Conditions</h1>
+ <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, nunc ac faucibus porttitor, sem felis maximus est, eget aliquam augue nisl id ex. Etiam sollicitudin quis purus eu iaculis. Vestibulum turpis dolor, commodo ut finibus in, vestibulum nec velit. Aenean varius vel arcu ut malesuada. Praesent vulputate in nisi vel elementum. Pellentesque nec nisl elementum, porta tellus ac, porttitor libero. Nam augue orci, rhoncus a fringilla sit amet, dictum non odio. Aliquam sollicitudin odio tellus. Quisque imperdiet elit vel libero pharetra, non vulputate est interdum.
+ </p>
           <hr className="bg-orange" />
           <p className="text-left">
             <a href="#" className="text-decoration-none">Read More</a>

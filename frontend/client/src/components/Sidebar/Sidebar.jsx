@@ -58,13 +58,37 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
-              <Link to="#" className="nav-link " aria-current="page">
+              <Link to="/MyProfileSettings" className="nav-link " aria-current="page">
                 <i className="bi bi-gear" style={{ color: 'white' }}></i>
                 <span className="ms-3 d-none d-sm-inline text-white text-size">
                   Settings
                 </span>
               </Link>
             </li>
+                        {/* <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
+              <Link to="/Overview" className="nav-link " aria-current="page">
+                <i className="bi bi-gear" style={{ color: 'white' }}></i>
+                <span className="ms-3 d-none d-sm-inline text-white text-size">
+                  Overview
+                </span>
+              </Link>
+            </li>
+            <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
+              <Link to="/Pay" className="nav-link " aria-current="page">
+                <i className="bi bi-gear" style={{ color: 'white' }}></i>
+                <span className="ms-3 d-none d-sm-inline text-white text-size">
+                  Pay
+                </span>
+              </Link>
+            </li>
+                        <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
+              <Link to="/Statement" className="nav-link " aria-current="page">
+                <i className="bi bi-gear" style={{ color: 'white' }}></i>
+                <span className="ms-3 d-none d-sm-inline text-white text-size">
+                  Statement
+                </span>
+              </Link>
+            </li> */}
             <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
               <Link to="#" className="nav-link " aria-current="page">
                 <i

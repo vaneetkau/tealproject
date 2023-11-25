@@ -15,21 +15,31 @@ function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(email);
-    console.log(password);
-    signInWithEmailAndPassword(auth, email, password)
-      .then((value) => {
-        alert("Successfully Loggedin");
-        navigate("/Sidebar");
-        navigate("/Home");
-      })
-      .catch((error) => {
-        console.error("Login failed:", error);
-        alert("Login failed");
-      });
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+  // valid email format
+  const isValidEmail = /\S+@\S+\.\S+/.test(email);
+
+  if (!isValidEmail) {
+    alert("Please enter a valid email address");
+    return;
+  }
+
+  console.log(email);
+  console.log(password);
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((value) => {
+      alert("Successfully Loggedin");
+      navigate("/Sidebar");
+      navigate("/Home");
+    })
+    .catch((error) => {
+      console.error("Login failed:", error);
+      alert("Login failed");
+    });
+};
+
 
   const handleEmailOnChange = (e) => {
     e.preventDefault();
