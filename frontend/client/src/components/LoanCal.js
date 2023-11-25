@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Sidebar from './Sidebar/Sidebar';
 
 function LoanCalculator() {
   const [income, setIncome] = useState(0);
@@ -41,6 +42,7 @@ function LoanCalculator() {
 
   return (
     <div>
+      <Sidebar/>
       <h2>Loan Eligibility Calculator</h2>
       <div>
         <label>Monthly Income ($):</label>

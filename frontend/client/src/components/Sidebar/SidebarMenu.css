@@ -1,0 +1,35 @@
+.nav-pills li a:hover{
+    background-color: #FFB700;
+}
+.logo {
+    width: 80%;
+    height: auto; /* Maintain aspect ratio */
+  }
+.text-size {
+    font-size: 16px;
+}
+  @media (max-width: 768px) {
+    .logo {
+      width: 50%;
+    }
+    .text-size {
+        font-size: 16px;
+    }
+  }
+  @media (min-width: 768px) {
+    .logo {
+      width: 80%;
+    }
+    .text-size {
+        font-size: 16px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .logo {
+      width: 80%;
+    }
+    .text-size {
+        font-size: 20px;
+    }
+  }

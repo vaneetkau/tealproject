@@ -1,100 +1,93 @@
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import Button from '@mui/material/Button';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap/js/dist/dropdown';
+import './SidebarMenu.css';
+import loanEaseLogo from '../../LoanEaseLogo-White.png';
+import sidebarProfile from "../../sidebarProfile.png"
+import { Link } from 'react-router-dom';
+// import LatestNews from "../LatestNews/LatestNews";
 
-const drawerWidth = 240;
-
-function Sidebar() {
+const Sidebar = () => {
+  
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
+    <>
+      <div
+        className="position-fixed top-0 start-0 bottom-0 col-auto col-md-3 d-flex justify-content-start flex-column"
+        style={{ backgroundColor: '#2267CA', width: '250px' }}
       >
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            Latest News
-          </Typography>
-        </Toolbar>
-      </AppBar>
+        <div>
+          <img
+            className="rounded-circle mx-auto my-4"
+            src={sidebarProfile}
+            alt="LoanEase Logo"
+          />
 
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="permanent"
-        anchor="left"
-      >
-        <Toolbar />
-        <Divider />
-        <List>
-          {['Home', 'Latest News', 'Get Advice', 'Get Your Ease'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['Settings', 'Logout'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
-      >
-        <Toolbar />
-
-        <Typography paragraph>
-          Lorem ipsum, or lipsum as it is sometimes known
-        </Typography>
-        <Typography paragraph>
-          Apply For A Loan Or Scholarship
-        </Typography>
-
-        <Button variant="contained" color="success">
-          Our Services
-        </Button>
-        <br /><br /><br />
-        <Typography paragraph>
-          Product Description
-        </Typography>
-        {}
-      </Box>
-    </Box>
+          <hr className="text-secondary d-none d-sm-block" />
+          <ul className="nav nav-pills flex-column mt-3 mt-sm-0">
+            <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
+              <Link to="/home" className="nav-link " aria-current="page">
+                <i className="bi bi-house" style={{ color: 'white' }}></i>
+                <span className="ms-3 d-none d-sm-inline text-white text-size">
+                  Home
+                </span>
+              </Link>
+            </li>
+            <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
+              <Link to="/LatestNews" className="nav-link " aria-current="page">
+                <i className="bi bi-flag" style={{ color: 'white' }}></i>
+                <span className="ms-3 d-none d-sm-inline text-white text-size">
+                  Latest News
+                </span>
+              </Link>
+            </li>
+            <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
+              <Link to="/LoanAdvice" className="nav-link " aria-current="page">
+                <i className="bi bi-info-circle" style={{ color: 'white' }}></i>
+                <span className="ms-3 d-none d-sm-inline text-white text-size">
+                  Get Advice
+                </span>
+              </Link>
+            </li>
+            <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
+              <Link to="/LoanList" className="nav-link " aria-current="page">
+                <i className="bi bi-cursor" style={{ color: 'white' }}></i>
+                <span className="ms-3 d-none d-sm-inline text-white text-size">
+                  Get your ease
+                </span>
+              </Link>
+            </li>
+            <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
+              <Link to="#" className="nav-link " aria-current="page">
+                <i className="bi bi-gear" style={{ color: 'white' }}></i>
+                <span className="ms-3 d-none d-sm-inline text-white text-size">
+                  Settings
+                </span>
+              </Link>
+            </li>
+            <li className="nav-item text-white fs-5 my-1 py-2 py-sm-0">
+              <Link to="#" className="nav-link " aria-current="page">
+                <i
+                  className="bi bi-box-arrow-left"
+                  style={{ color: 'white' }}
+                ></i>
+                <span className="ms-3 d-none d-sm-inline text-white text-size">
+                  Log Out
+                </span>
+              </Link>
+            </li>
+          </ul>
+          <img
+            className="d-flex d-none d-sm-inline align-item-center m-4"
+            src={loanEaseLogo}
+            height="100"
+            width="160"
+            alt="LoanEase Logo"
+          />
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default Sidebar;

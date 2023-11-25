@@ -1,27 +1,79 @@
+// const express = require('express');
+// const router = express.Router();
+// const Loan = require('../models/Loan');
+
+
+// // Create a new loan
+// router.post('/loans', async (req, res) => {
+//   try {
+//     const loan = new Loan(req.body);
+//     await loan.save();
+
+//     // Fetch the saved loan from the database
+//     const createdLoan = await Loan.findById(loan._id);
+
+//     res.json(createdLoan); // Send the created loan in the response
+//   } catch (error) {
+//     console.error('Error creating loan:', error);
+//     res.status(500).json({ error: 'Failed to create loan' });
+//   }
+// });
+
+
+// // Get all loans
+// router.get('/loans', async (req, res) => {
+//   try {
+//     const loans = await Loan.find();
+//     res.json(loans);
+//   } catch (error) {
+//     res.status(500).json({ error: 'Failed to fetch loans' });
+//   }
+// });
+
+
+
+
+
+// // Update a loan
+// router.put('/loans/:id', async (req, res) => {
+//   try {
+//     const updatedLoan = await Loan.findByIdAndUpdate(req.params.id, req.body, { new: true });
+//     res.json(updatedLoan);
+//   } catch (error) {
+//     res.status(500).json({ error: 'Failed to update loan' });
+//   }
+// });
+
+// // Delete a loan
+// router.delete('/loans/:id', async (req, res) => {
+//   try {
+//     await Loan.findByIdAndRemove(req.params.id);
+//     res.json({ message: 'Loan deleted successfully' });
+//   } catch (error) {
+//     res.status(500).json({ error: 'Failed to delete loan' });
+//   }
+// });
+
+// module.exports = router;
+// loanRoutes.js
 const express = require('express');
 const router = express.Router();
-const Loan = require('../models/Loan');
-
+const Loan = require('../models/Loan'); // Import your Loan model
 
 // Create a new loan
-router.post('/loans', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const loan = new Loan(req.body);
     await loan.save();
-
-    // Fetch the saved loan from the database
-    const createdLoan = await Loan.findById(loan._id);
-
-    res.json(createdLoan); // Send the created loan in the response
+    res.json(loan); // Send the created loan in the response
   } catch (error) {
     console.error('Error creating loan:', error);
     res.status(500).json({ error: 'Failed to create loan' });
   }
 });
 
-
 // Get all loans
-router.get('/loans', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const loans = await Loan.find();
     res.json(loans);
@@ -30,12 +82,8 @@ router.get('/loans', async (req, res) => {
   }
 });
 
-
-
-
-
 // Update a loan
-router.put('/loans/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const updatedLoan = await Loan.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.json(updatedLoan);
@@ -45,7 +93,7 @@ router.put('/loans/:id', async (req, res) => {
 });
 
 // Delete a loan
-router.delete('/loans/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     await Loan.findByIdAndRemove(req.params.id);
     res.json({ message: 'Loan deleted successfully' });

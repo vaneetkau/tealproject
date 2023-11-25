@@ -1,0 +1,148 @@
+// AboutPage.js
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import blueBannerImage from './blue-banner.png';
+
+const FaqPage = () => {
+  return (
+    <div className='d-flex flex-column'>
+      <Header />
+      <ImageSection />
+      <TextSection />
+      <TextSection />
+      <TextSection />
+
+      <TwoColumnSection />
+      <Footer />
+    </div>
+  );
+};
+
+const ImageSection = () => {
+    const imageSectionStyle = {
+      textAlign: 'center',
+      padding: '2rem',
+      backgroundColor: '#e0e0e0',
+      backgroundImage: `url(${blueBannerImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      height: '300px', // Set your preferred height for the section
+      position: 'relative', // Ensure relative positioning for text overlay
+    };
+  return (
+    <section className=" w-100 h-25 d-inline-block" style={imageSectionStyle}>
+      <h3 className="text-white">“Discover, Apply and Ease your Budget”</h3>
+    </section>
+  );
+};
+
+const TextSection = () => {
+  return (
+    <section style={textSectionStyle}>
+      <h2>Applying</h2>
+      <p>
+        {' '}
+        <a> Place your paragraph text here.</a>{' '}
+      </p>
+      <p>
+        {' '}
+        <a> Place your paragraph text here.</a>{' '}
+      </p>{' '}
+      <p>
+        {' '}
+        <a> Place your paragraph text here.</a>{' '}
+      </p>
+      <p>
+        {' '}
+        <a> Place your paragraph text here.</a>{' '}
+      </p><br />
+    </section>
+  );
+};
+
+
+const TwoColumnSection = () => {
+  return (
+    <section style={sectionStyle}>
+      <div style={leftColumnStyle}>
+        <h3>Left Column</h3>
+        <p>Your left column content goes here.</p>
+      </div>
+      <div style={rightColumnStyle}>
+        <img
+          src="path/to/your/image.jpg"
+          alt="Description"
+          style={columnImageStyle}
+        />
+      </div>
+    </section>
+  );
+};
+
+// Styles
+const imageSectionStyle = {
+  textAlign: 'center',
+  padding: '2rem',
+  backgroundColor: '#e0e0e0',
+};
+
+const imageStyle = {
+  maxWidth: '100%',
+  height: 'auto',
+};
+
+const textSectionStyle = {
+  textAlign: 'center',
+  padding: '2rem',
+  backgroundColor: '#f0f0f0',
+};
+
+const sectionStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  padding: '2rem',
+  backgroundColor: '#f0f0f0',
+};
+
+const leftColumnStyle = {
+  flex: '0 0 70%',
+};
+
+const rightColumnStyle = {
+  flex: '0 0 30%',
+};
+
+const columnImageStyle = {
+  maxWidth: '100%',
+  height: 'auto',
+};
+// Add responsive styles
+const responsiveStyles = {
+  headerStyle: {
+    fontSize: '1.5rem',
+  },
+  imageSectionStyle: {
+    padding: '1rem',
+  },
+  textSectionStyle: {
+    padding: '1rem',
+  },
+};
+
+// Apply responsive styles using media queries
+Object.keys(responsiveStyles).forEach((key) => {
+  const style = responsiveStyles[key];
+  const mediaQuery = `@media (max-width: 768px) { ${key} { ${Object.entries(
+    style
+  )
+    .map(([property, value]) => `${property}: ${value};`)
+    .join(' ')} } }`;
+  const styleTag = document.createElement('style');
+  styleTag.type = 'text/css';
+  styleTag.appendChild(document.createTextNode(mediaQuery));
+  document.head.appendChild(styleTag);
+});
+
+export default FaqPage;

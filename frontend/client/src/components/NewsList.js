@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Sidebar from './Sidebar/Sidebar';
 
 function NewsList({ newsType }) {
   const [news, setNews] = useState([]);
@@ -20,6 +21,7 @@ function NewsList({ newsType }) {
 
   return (
     <div>
+      <Sidebar/>
       <h2>List of {newsType} News</h2>
       <ul>
         {news.map((article) => (
