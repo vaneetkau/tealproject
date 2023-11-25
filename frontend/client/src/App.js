@@ -18,6 +18,7 @@ import MyProfileSettings from "./components/MyProfileSettings"
 import Overview from "./components/Overview/Overview";
 import Pay from "./components/Pay/Pay";
 import Statement from "./components/Statement/Statement";
+import MyProfile from "./components/MyProfile";
 function App() {
 
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/LoanAdvice" element={<LoanAdvice />} />
           <Route path="/LoanList" element={<LoanList />} />
           <Route path="/MyProfileSettings" element={<MyProfileSettings />} />
+          <Route path="/MyProfile" element={<MyProfile />} />
           <Route path="/Overview" element={<Overview />} />
           <Route path="/Pay" element={<Pay />} />
           <Route path="/Statement" element={<Statement />} />

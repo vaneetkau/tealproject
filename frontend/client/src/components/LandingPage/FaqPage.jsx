@@ -11,7 +11,9 @@ const FaqPage = () => {
     <div className='d-flex flex-column'>
       <Header />
       <ImageSection />
-      <TextSection />
+              <TextSection />
+      <TextSection2 />
+            <TextSection3 />
 
       <TwoColumnSection />
       <Footer />
@@ -65,6 +67,72 @@ const TextSection = () => {
     </section>
   );
 };
+
+const TextSection2 = () => {
+  return (
+    <section style={textSectionStyle}>
+ <div className="container-fluid text-left" style={{ backgroundColor: '#F4F4F4' }}>
+      <div className="row">
+        <div className="col">
+          <h1 className="text-left mb-4">General</h1>
+          <ul className="list-unstyled">
+            <li>
+              <a href="#" className="text-left d-block mb-2">How do I know if I qualify??</a>
+            </li>
+            <li>
+              <a href="#" className="text-left d-block mb-2">Do I need a bank account to apply??</a>
+            </li>
+            <li>
+              <a href="#" className="text-left d-block mb-2">Can I apply for multiple loans??</a>
+            </li>
+                        <li>
+              <a href="#" className="text-left d-block mb-2">Can I apply for multiple Scholarship???</a>
+            </li>
+          </ul>
+          <hr className="bg-orange" />
+          <p className="text-left">
+            <a href="#" className="text-decoration-none">Read More</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+  );
+};
+
+const TextSection3 = () => {
+  return (
+    <section style={textSectionStyle}>
+ <div className="container-fluid text-left" style={{ backgroundColor: '#F4F4F4' }}>
+      <div className="row">
+        <div className="col">
+          <h1 className="text-left mb-4">Repayment</h1>
+          <ul className="list-unstyled">
+            <li>
+              <a href="#" className="text-left d-block mb-2">Can I repay my loans Early?</a>
+            </li>
+            <li>
+              <a href="#" className="text-left d-block mb-2">What are the Interest rate and costs? </a>
+            </li>
+            <li>
+              <a href="#" className="text-left d-block mb-2">Do I have payment History?</a>
+            </li>
+                        <li>
+              <a href="#" className="text-left d-block mb-2">Can I download my payment tickets?</a>
+            </li>
+          </ul>
+          <hr className="bg-orange" />
+          <p className="text-left">
+            <a href="#" className="text-decoration-none">Read More</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+  );
+};
+
+
 
 const TwoColumnSection = () => {
   const imageSectionStyle = {

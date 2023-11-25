@@ -118,20 +118,16 @@ const IconSection = () => {
         <div class="container">
           <div class="row">
             <div class="col-sm" style={iconStyle}>
-              One of three columns
-              <p>Look for the loan or scholarship that best suits you</p>
+              Look
             </div>
             <div class="col-sm" style={iconStyle}>
-              One of three columns
-              <p>Select and get all the information</p>
+              Select
             </div>
             <div class="col-sm" style={iconStyle}>
-              One of three columns
-              <p>Fill the application letter </p>
+              Apply
             </div>
             <div class="col-sm" style={iconStyle}>
-              One of three columns
-              <p>Wait for the reply!</p>
+              Wait
             </div>
           </div>
         </div>

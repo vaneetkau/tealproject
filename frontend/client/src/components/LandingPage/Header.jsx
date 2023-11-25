@@ -3,12 +3,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Login from '../UserAuthentication/Login';
 // import './HeaderSection.css'
+import LogoImg from './logo.png'
 
 const Header = () => {
   return (
     <header style={headerStyle}>
-      <div style={logoStyle}>Logo</div>
-      <div style={navLinksStyle}>
+<div style={logoStyle}>
+  <img src={LogoImg} alt="Logo" /> {/* Use LogoImg variable */}
+</div>
+                <div style={navLinksStyle}>
         <Link to="/" style={linkStyle}>
           Home
         </Link>
@@ -59,6 +62,12 @@ const linkStyle = {
   marginRight: '1rem',
   textDecoration: 'none',
   color: '#000',
+  transition: 'color 0.3s ease', // Adding a smooth color transition
+  // Hover effect
+  ':hover': {
+    color: '#FF0000', // Change the color on hover
+    textDecoration: 'underline', // Underline on hover (optional)
+  },
 };
 
 const loginButtonStyle = {

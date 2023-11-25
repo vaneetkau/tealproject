@@ -7,10 +7,19 @@ import PaymentMethod from "./Pay/PaymentMethod";
 import Pay from "./Pay/Pay";
 import LoanList from "./LoanTest/LoanList";
 import NewsList from "./NewsList";
+import Sidebar from "./Sidebar/Sidebar";
+import '../App.css'
 
 const MyProfile = (props) => {
 
   return (
+        <div className="container-fluid">
+
+      <div className="row">
+        <div className="col-lg-2 col-md-3" style={{ paddingLeft: 0 }}>
+          <Sidebar />
+        </div>
+        <div className="col-lg-10 col-md-9 p-0">
     <>
       <div className="welcomeMsg">
         <img src={loanEaseLogo} height="100" width="200"/>
@@ -54,6 +63,9 @@ const MyProfile = (props) => {
 
       </div>
     </>
+    </div>
+    </div>
+    </div>
   );
 };
 

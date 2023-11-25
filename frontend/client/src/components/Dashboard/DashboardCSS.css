@@ -1,0 +1,56 @@
+.color-primary{
+    color: #2267CA;
+}
+.color-grey{
+    color: #979797;
+}
+.color-mango{
+    color: #FFB700;
+}
+.bgcolor-offwhite{
+    background-color: #F3F3F3;
+}
+.bgcolor-lightBlue{
+    background-color: #C8DFFF;
+}
+.bgcolor-primary{
+    background-color: #2267CA;
+}
+.bgcolor-grey{
+    background-color: #979797;
+}
+
+
+
+.border-radius{
+    border-radius: 30px;
+}
+
+.main-container-border-radius{
+    border-top-left-radius: 80px;
+}
+
+.container-sm{
+    border-radius: 20px;
+
+}
+
+.small-pig-logo{
+    width: 2px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+      width: 100%;
+      position: fixed;
+      z-index: 2; /* Make sure the sidebar is on top of the content */
+      transform: translateX(-100%);
+    }
+  
+    sidebar-open #content {
+      margin-left: 0;
+    }
+  }
+
+  
