@@ -45,8 +45,7 @@ const TextSection = () => {
         <div className="col">
           <h1 className="text-left mb-4">What are Terms and Conditions</h1>
  <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, nunc ac faucibus porttitor, sem felis maximus est, eget aliquam augue nisl id ex. Etiam sollicitudin quis purus eu iaculis. Vestibulum turpis dolor, commodo ut finibus in, vestibulum nec velit. Aenean varius vel arcu ut malesuada. Praesent vulputate in nisi vel elementum. Pellentesque nec nisl elementum, porta tellus ac, porttitor libero. Nam augue orci, rhoncus a fringilla sit amet, dictum non odio. Aliquam sollicitudin odio tellus. Quisque imperdiet elit vel libero pharetra, non vulputate est interdum.
- </p>
+ Terms and conditions for a loan and scholarship suggestion website should cover user eligibility, services provided, user responsibilities, privacy policy, intellectual property, financial disclaimers, liability, termination, changes to terms, governing law, and contact information. These terms protect both the website and users by outlining the rules and responsibilities of using the platform, handling user data, and specifying limitations on the information provided. It's important to have these terms reviewed by a legal expert to ensure they align with laws and regulations. </p>
           <hr className="bg-orange" />
           <p className="text-left">
             <a href="#" className="text-decoration-none">Read More</a>
