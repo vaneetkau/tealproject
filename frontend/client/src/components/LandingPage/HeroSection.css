@@ -6,17 +6,16 @@ body, html {
 
 .hero {
  display: flex;
- justify-content: center;
- align-items: center;
+ justify-content: left;
+ align-items: left;
  padding: 2rem;
  background-color: #e0e0e0;
- height: 100vh; /* vh stands for viewport height */
+ height: 100vh;
 }
 
 .left-column {
  flex: 1;
  margin-right: 2rem;
- text-align: center;
 }
 
 .right-column {
@@ -27,4 +26,34 @@ body, html {
 .hero-image {
  max-width: 100%;
  height: auto;
+}
+
+.hero h1 {
+  font-size: 3rem; 
+  font-weight: bold; 
+}
+
+.hero p {
+  font-size: 1.25rem; 
+  font-weight:400; 
+}
+
+.btn-warning {
+  font-size: 1.5rem !important; 
+  color: #fff !important;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-warning {
+    font-size: 1.25rem;
+  }
 }

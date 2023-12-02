@@ -20,12 +20,8 @@ const Dashboard = () => {
   <h1 className='color-primary'>Welcome {UserName}</h1>
   <h5 className='color-grey'>{Date}</h5>
 </div>
-
-
-
-
           <div className='row mt-5'>
-            <div className='col-lg-8'>
+            <div className='col-lg-6'>
               <div className='d-flex flex-row container-lg p-3 shadow bg-white border border-radius'>
 <div className='d-flex flex-column justify-content-start align-items-start mt-2 p-2'>
   <h6 className='color-mango' style={{ fontWeight: 600 }}>
@@ -44,8 +40,8 @@ const Dashboard = () => {
               </div>
 
               {/* Cards Section */}
-<div className='row mt-5'>
-  <div className='col-lg-2 col-md-3 col-sm-4'>
+<div className='row mt-5 m-0'>
+  <div className='col-lg-3  col-sm-4 m-0'>
     <div className='card border-radius w-100 h-auto'>
       <div className='card-body color-primary'>
         <h2 className='card-title text-center'>5%</h2>
@@ -53,7 +49,7 @@ const Dashboard = () => {
       </div>
     </div>
   </div>
-  <div className='col-lg-2 col-md-3 col-sm-4'>
+  <div className='col-lg-3 col-sm-4 m-0'>
     <div className='card border-radius w-100 h-auto'>
       <div className='card-body color-primary'>
         <h2 className='card-title text-center'>700</h2>
@@ -61,7 +57,7 @@ const Dashboard = () => {
       </div>
     </div>
   </div>
-  <div className='col-lg-2 col-md-3 col-sm-4'>
+  <div className='col-lg-3 col-sm-4 m-0'>
     <div className='card border-radius w-100 h-auto'>
       <div className='card-body color-primary'>
         <h2 className='card-title text-center'>1k</h2>
@@ -69,7 +65,7 @@ const Dashboard = () => {
       </div>
     </div>
   </div>
-  <div className='col-lg-2 col-md-3 col-sm-4'>
+  <div className='col-lg-3 col-sm-4 m-0'>
     <div className='card border-radius w-100 h-auto'>
       <div className='card-body color-primary'>
         <h2 className='card-title text-center'>5k</h2>
@@ -81,14 +77,11 @@ const Dashboard = () => {
 
 
             </div>
-
-            {/* Right Sidebar */}
-                        <div className='col-lg-4 mt-2'>
-              <div className='bg-white shadow p-4 border border-radius' style={{ width: '100%' }}>
+              <div className='col-lg-6 mt-2'>
+              <div className='bg-white shadow  border border-radius' style={{ width: '100%' }}>
               <LoanCalculator />
               </div>
             </div>
-            {/* Removed the second column */}
           </div>
 
           {/* Bottom Section */}
@@ -105,7 +98,7 @@ const Dashboard = () => {
                     <h5 className='mt-2'>Pockets</h5>
                     <div className='row mt-3'>
                         <div class="col-md-4 d-flex flex-column align-items-center">
-                            <div class="card w-100 h-50">
+                            <div class="card w-50 h-50">
                                 <div class="card-body color-primary">
                                     <div>0</div>
                                 </div>
@@ -113,7 +106,7 @@ const Dashboard = () => {
                                 <span className='color-primary mt-2'>Materials</span>
                         </div>
                         <div class="col-md-4 d-flex flex-column align-items-center">
-                            <div class="card w-100 h-50">
+                            <div class="card w-50 h-50">
                                 <div class="card-body color-primary">
                                     <div>3</div>
                                 </div>
@@ -121,7 +114,7 @@ const Dashboard = () => {
                                 <span className='color-primary mt-2'>Projects</span>
                         </div>
                         <div class="col-md-4 d-flex flex-column align-items-center">
-                            <div class="card w-100 h-50">
+                            <div class="card w-50 h-50">
                                 <div class="card-body color-primary">
                                     <div>0</div>
                                 </div>
@@ -134,7 +127,7 @@ const Dashboard = () => {
                     <h5 className='mt-2'>Goals</h5>
                     <div className='row mt-3'>
                     <div class="col-md-4 d-flex flex-column align-items-center">
-                        <div class="card w-100 h-50" style={{ width: "100%" }}>
+                        <div class="card w-50 h-50" style={{ width: "100%" }}>
                             <div class="card-body color-primary">
                                 <div>2</div>
                             </div>
@@ -142,7 +135,7 @@ const Dashboard = () => {
                             <span className='color-primary mt-2'>Loan1</span>
                     </div>
                     <div class="col-md-4 d-flex flex-column align-items-center">
-                        <div class="card w-100 h-50">
+                        <div class="card w-50 h-50">
                             <div class="card-body color-primary">
                                 <div>1</div>
                             </div>
@@ -150,7 +143,7 @@ const Dashboard = () => {
                             <span className='color-primary mt-2'>Loan2</span>
                     </div>
                     <div class="col-md-4 d-flex flex-column align-items-center">
-                        <div class="card w-100 h-50">
+                        <div class="card w-50 h-50">
                             <div class="card-body color-primary">
                                 <div>6</div>
                             </div>

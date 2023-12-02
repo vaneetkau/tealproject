@@ -1,7 +1,6 @@
-// Hero.js
 import React from 'react';
-import './HeroSection.css'
-import HeroSectionImg from './Hero-image.png'
+import './HeroSection.css';
+import HeroSectionImg from './Hero-image.png';
 import { useNavigate } from 'react-router-dom';
 import Login from '../UserAuthentication/Login';
 import Header from './Header';
@@ -12,59 +11,38 @@ const HeroSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Login")
-    navigate("/Login")    
-};
+    console.log("Login");
+    navigate("/Login");
+  };
 
   return (
-    <div className='d-flex flex-column'>
-      <Header/>
-      <section className="hero">
-        <div className="left-column">
-          <h1 className="text-primary">
-            Get help to ease your studies, Just Discover, Apply and Ease your
-            budget!
-          </h1>
-          <p>
-            Don’t Know how? Don’t Worry, we got you! begin your Journey today and
-            don’t miss any opportunity to get a loan or scholarship again!
-          </p>
-          <button type='submit' onClick={handleSubmit} className='btn btn-warning'>Begin Today!</button>
-        </div>
-        <div className="right-column">
-          <img
-            src={HeroSectionImg}
-            alt="Description"
-            className="hero-image"
-          />
+    <div>
+      <Header />
+      <section className="hero container-fluid">
+        <div className="row align-items-center mt-lg-0 mt-1"> 
+          <div className="col-lg-6">
+            <h1 className="text-primary">
+              Get help to ease your studies, Just Discover, Apply and Ease your
+              budget!
+            </h1>
+            <p>
+              Don’t Know how? Don’t Worry, we got you! begin your Journey today and
+              don’t miss any opportunity to get a loan or scholarship again!
+            </p>
+            <button type='submit' onClick={handleSubmit} className='btn btn-lg btn-warning'>Begin Today!</button>
+          </div>
+          <div className="col-lg-6">
+            <img
+              src={HeroSectionImg}
+              alt="Description"
+              className="hero-image img-fluid"
+            />
+          </div>
         </div>
       </section>
-      <Footer/>
-      </div>
-        );
-      };
-      const heroStyle = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '2rem',
-        backgroundColor: '#e0e0e0',
-      };
-      
-      const leftColumnStyle = {
-        flex: 1,
-        marginRight: '2rem',
-        textAlign: 'center',
-      };
-      
-      const rightColumnStyle = {
-        flex: 1,
-        textAlign: 'center',
-      };
-      
-      const imageStyle = {
-        maxWidth: '100%',
-        height: 'auto',
-      };
+      <Footer />
+    </div>
+  );
+};
 
 export default HeroSection;
