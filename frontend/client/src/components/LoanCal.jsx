@@ -52,21 +52,49 @@ function LoanCalculator() {
     updatePieChartData();
   };
 
-    const [pieChartData, setPieChartData] = useState({
-      labels: ['Eligible Loan Amount', 'Monthley Payment'],
-      data: [50,50],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.5)',
-        'rgba(54, 162, 235, 0.5)',
-      ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-      ],
-      label: 'Sample Pie Data',
-    });
+
+  const [pieChartData, setPieChartData] = useState({
+    labels: [
+      'Eligible Loan Amount',
+      'Monthly Payment',
+      'Monthley Income',
+      'Housing Expenses',
+      'Groceries',
+      'Transportation',
+      'Health',
+    ],
+    data: [50, 50, 10, 15, 20, 30, 25], // Initial values for eligible amount, monthly payment, and other data
+    backgroundColor: [
+      'rgba(255, 99, 132, 0.5)',
+      'rgba(54, 162, 235, 0.5)',
+      'rgba(255, 206, 86, 0.5)',
+      'rgba(75, 192, 192, 0.5)',
+      'rgba(153, 102, 255, 0.5)',
+      'rgba(255, 159, 64, 0.5)',
+      'rgba(23, 87, 164, 0.5)',
+    ],
+    borderColor: [
+      'rgba(255, 99, 132, 1)',
+      'rgba(54, 162, 235, 1)',
+      'rgba(255, 206, 86, 1)',
+      'rgba(75, 192, 192, 1)',
+      'rgba(153, 102, 255, 1)',
+      'rgba(255, 159, 64, 1)',
+      'rgba(23, 87, 164, 1)',
+    ],
+    label: 'Sample Pie Data',
+  });
+
   const updatePieChartData = () => {
-    const newData = [loanAmount, monthlyPayment /* Add other relevant data */];
+    const newData = [
+      loanAmount,
+      monthlyPayment,
+      parseFloat(formData.income),
+      parseFloat(formData.housing),
+      parseFloat(formData.groceries),
+      parseFloat(formData.transportation),
+      parseFloat(formData.health),
+    ];
     setPieChartData({ ...pieChartData, data: newData });
   };
 
