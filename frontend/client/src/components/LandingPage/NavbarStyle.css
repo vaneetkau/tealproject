@@ -1,0 +1,38 @@
+.logo_LoanEase {
+  width: "auto";
+  height: "30px";
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2834, 103, 202, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-light .navbar-toggler {
+  color: rgba(34,103,202,1);
+  border-color: rgba(34,103,202,1);
+}
+
+.navbar-toggler-icon {
+  margin: 0;
+}
+
+@media (min-width: 991px) {
+  .nav-link:hover {
+    border-top: 1px solid #2267CA;
+    border-radius: 5px;
+  }
+  .nav-link.active {
+    border-top: 3px solid #2267CA; 
+    border-radius: 5px;
+
+  }
+}
+@media (max-width: 991px) {
+  .nav-link.active {
+    color: #2267CA !important;
+  }
+  .logo_LoanEase {
+    width: "auto";
+    height: "25px";
+  }
+
+}

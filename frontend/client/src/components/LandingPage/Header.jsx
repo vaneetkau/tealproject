@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
+      <div className="container" style={{backgroundColor: "#F3F3F3",}}>
         <Link className="navbar-brand" to="/">
           <img src={LogoImg} alt="Logo" />
         </Link>
@@ -19,9 +19,9 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon m-0"></span>
         </button>
-        <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <div className="collapse navbar-collapse justify-content-between pb-3" id="navbarNav">
           <ul className="navbar-nav mx-auto"> {/* Centered Links */}
             <li className="nav-item">
               <Link className="nav-link" to="/">

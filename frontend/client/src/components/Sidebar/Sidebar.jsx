@@ -1,89 +1,81 @@
-import React, { useState } from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import { Link } from "react-router-dom";
-import user from "./Ellipse.png";
-import loanEaseLogoWhite from "../../LoanEaseLogo-White.png";
-import "./SidebarMenu.css";
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { FaBars } from 'react-icons/fa';
+import { AiOutlineClose } from 'react-icons/ai';
+
+import { SidebarData  } from './SidebarData'
+import "./Sidebar.css";
+import { IconContext } from 'react-icons/lib'
+import LoanEaseLogoSmall from '../../LoanEaseLogo-sm.png'
+import user from './Ellipse.png'
+import LoanEaseLogoWhite from '../../LoanEaseLogo-White.png'
+
 
 const Sidebar = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebar, setSidebar] = useState(false)
 
-  const toggleSidebar = () => {
-    setSidebarOpen(!isSidebarOpen);
-  };
+  const showSidebar = () => setSidebar(!sidebar)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSidebar(window.innerWidth >= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
-    <div className={`col-auto col-lg-2 col-md-3 col-sm-4 min-vh-100 d-flex flex-column position-fixed Sidebar ${isSidebarOpen ? 'show' : ''}`} style={{ backgroundColor: "#2267CA", paddingTop: "4rem", paddingLeft: "0", paddingRight: "0" }}>
-      <button className="btn btn-primary bgcolor-primary d-md-none d-lg-none" onClick={toggleSidebar}>
-        <i className={`bi ${isSidebarOpen ? 'bi-x' : 'bi-list'}`}></i>
-      </button>
-      <div className=''>
-        <div className="d-flex align-items-center justify-content-center mb-4 mt-auto">
-          <img src={user} alt="Your Alt Text" className="rounded-circle" />
+    <>
+      <IconContext.Provider value={{color: 'white'}} style={{ zIndex: 1000 }}>
+        <div className="navbar d-flex justify-content-between px-4 d-non d-md-none">
+          <Link to="#" className='menu-bars p-2'>
+          <img           
+            src={LoanEaseLogoSmall}
+            className="d-inline-block align-top logo_LoanEase"
+            alt="LoanEase"
+          />
+          </Link>
+          <Link to="#" className='menu-bars p-2 '>
+            <FaBars onClick={showSidebar}/>
+          </Link>
         </div>
-        <hr className="text-secondary d-none d-md-block" />
-        <ul className="nav nav-pills flex-column mt-3 mt-md-0 d-flex align-items-left justify-content-center">
-          <li className="nav-item text-white fs-5 my-2">
-            <Link to="/home" className="nav-link " aria-current="page">
-              <i className="bi bi-house" style={{ color: "white" }}></i>
-              <span className="ms-3 text-white text-size-md">
-                Home
-              </span>
-            </Link>
-          </li>
-          <li className="nav-item text-white fs-5 my-2">
-            <Link to="/LatestNews" className="nav-link " aria-current="page">
-              <i className="bi bi-flag" style={{ color: "white" }}></i>
-              <span className="ms-3 text-white text-size-md">
-                Latest News
-              </span>
-            </Link>
-          </li>
-          <li className="nav-item text-white fs-5 my-2">
-            <Link to="/LoanAdvice" className="nav-link " aria-current="page">
-              <i className="bi bi-info-circle" style={{ color: "white" }}></i>
-              <span className="ms-3 text-white text-size-md">
-                Get Advice
-              </span>
-            </Link>
-          </li>
-          <li className="nav-item text-white fs-5 my-2">
-            <Link to="/LoanList" className="nav-link " aria-current="page">
-              <i className="bi bi-cursor" style={{ color: "white" }}></i>
-              <span className="ms-3 text-white text-size-md">
-                Get your ease
-              </span>
-            </Link>
-          </li>
-          <li className="nav-item text-white fs-5 my-2">
-            <Link to="/MyProfileSettings" className="nav-link " aria-current="page">
-              <i className="bi bi-gear" style={{ color: "white" }}></i>
-              <span className="ms-3 text-white text-size-md">
-                Settings
-              </span>
-            </Link>
-          </li>
-          <li className="nav-item text-white fs-5 my-2">
-            <Link to="#" className="nav-link " aria-current="page">
-              <i className="bi bi-box-arrow-left" style={{ color: "white" }}></i>
-              <span className="ms-3 text-white text-size-md">
-                Log Out
-              </span>
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div className="d-flex align-items-center justify-content-center mb-4 mt-auto">
-        <img className="logo-Sidebar d-flex d-none d-md-inline align-item-center" src={loanEaseLogoWhite} alt="LoanEase Logo" />
-      </div>
-    </div>
-  );
-};
+        <nav className={`${sidebar ? 'nav-menu active' : 'nav-menu'} lg-screen`} style={{ zIndex: 1000 }}>
+            <ul className="nav-menu-items p-0 h-100 nav-menu-ul" onClick={showSidebar}>
+              <ul className='m-0 p-0 d-flex flex-column justify-content-around'>
+                <li className='sm-screen'></li>
+                <li className="navbar-toggle px-4 d-flex justify-content-end d-non d-md-none">
+                  <Link to="#" className='menu-bars'>
+                    <AiOutlineClose />
+                  </Link>
+                </li>
+                <li class="text-center p-3 rounded sm-screen">
+                    <img src={user} alt="LoanEaseLogo" class="img-fluid rounded-circle"/>
+                </li>
+                <ul className='m-0 p-0'>
+                  {SidebarData.map((item, index) => {
+                    return (
+                      <li key={index} className={item.className}>
+                        <Link to={item.path}>
+                          {item.icon}
+                          <span>{item.title}</span>
+                        </Link>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </ul>
+              <li class="text-center p-4 pb-2 sm-screen">
+                  <img src={LoanEaseLogoWhite} alt="LoanEaseLogo" class="img-fluid" style={{maxWidth: "100px", marginBottom: '10px'}}/>
+              </li>
+            </ul>
+        </nav>
+      </IconContext.Provider>
+    </>
+  )
+}
 
-export default Sidebar;
-
-
-
-
-
+export default Sidebar

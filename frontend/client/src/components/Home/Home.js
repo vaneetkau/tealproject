@@ -4,8 +4,7 @@ import Dashboard from '../Dashboard/Dashboard';
 
 const Home = () => {
   return (
-    <div className="container-fluid">
-
+    <div className="container-fluid" style={{ backgroundColor: '#2267CA' }}>
       <div className="row">
         <div className="col-lg-2 col-md-3" style={{ paddingLeft: 0 }}>
           <Sidebar />

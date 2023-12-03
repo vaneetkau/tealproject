@@ -22,7 +22,7 @@ const Dashboard = () => {
 </div>
           <div className='row mt-5'>
             <div className='col-lg-6'>
-              <div className='d-flex flex-row container-lg p-3 shadow bg-white border border-radius'>
+              <div className='d-flex flex-row container-lg p-3  bg-white border border-radius'>
 <div className='d-flex flex-column justify-content-start align-items-start mt-2 p-2'>
   <h6 className='color-mango' style={{ fontWeight: 600 }}>
     You are one step closer!
@@ -33,7 +33,7 @@ const Dashboard = () => {
 </div>
 
                 <img
-                  className='d-none d-sm-inline align-item-center shadow border border-radius m-3'
+                  className='d-none d-sm-inline align-item-center  border border-radius m-3'
                   src={pig}
                   alt=''
                 />
@@ -78,14 +78,14 @@ const Dashboard = () => {
 
             </div>
               <div className='col-lg-6 mt-2'>
-              <div className='bg-white shadow  border border-radius' style={{ width: '100%' }}>
+              <div className='bg-white   border border-radius' style={{ width: '100%' }}>
               <LoanCalculator />
               </div>
             </div>
           </div>
 
           {/* Bottom Section */}
-          <div className='container-fluid shadow p-3 mt-5 bgcolor-lightBlue color-primary border border-radius'>
+          <div className='container-fluid  p-3 mt-5 bgcolor-lightBlue color-primary border border-radius'>
             <div className='row justify-content-around col-lg-12'>
               <div className='col-lg-6'>
                 <div className='color-primary m-3'>

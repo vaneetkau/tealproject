@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import PieChart from './PieChart';
+import { Link } from 'react-router-dom';
+
 
 function LoanCalculator() {
   const [formData, setFormData] = useState({
@@ -39,6 +41,8 @@ function LoanCalculator() {
     } else {
       setLoanAmount(0);
     }
+    updatePieChartData();
+
   };
 
   const calculateMonthlyPayment = () => {
@@ -49,7 +53,6 @@ function LoanCalculator() {
       const monthly = (principal * rate) / (1 - Math.pow(1 + rate, -months));
       setMonthlyPayment(monthly.toFixed(2));
     }
-    updatePieChartData();
   };
 
 
@@ -209,6 +212,9 @@ function LoanCalculator() {
           {monthlyPayment > 0 && (
             <div className="mt-3">
               <h3>Monthly Payment: ${monthlyPayment}</h3>
+              <Link to="/LoanList" className="btn btn-lg btn-block btn-primary">
+                See Eligible Loans
+              </Link>
             </div>
           )}
         </div>

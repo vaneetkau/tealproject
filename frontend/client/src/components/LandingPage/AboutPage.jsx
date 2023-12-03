@@ -97,6 +97,6 @@ const TwoColumnSection = () => {
 
 
 const loremIpsum =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, nunc ac faucibus porttitor, sem felis maximus est, eget aliquam augue nisl id ex. Etiam sollicitudin quis purus eu iaculis. Vestibulum turpis dolor, commodo ut finibus in, vestibulum nec velit. Aenean varius vel arcu ut malesuada. Praesent vulputate in nisi vel elementum. Pellentesque nec nisl elementum, porta tellus ac, porttitor libero. Nam augue orci, rhoncus a fringilla sit amet, dictum non odio. Aliquam sollicitudin odio tellus. Quisque imperdiet elit vel libero pharetra, non vulputate est interdum.';
+  'Welcome to YourFinancialEase.com, your personalized guide to unlocking financial opportunities for education. At YourFinancialEase, we understand that navigating the world of loans and scholarships can be overwhelming. Thats why we have created a user-friendly platform to empower you with the knowledge and options tailored to your unique financial situation.';
 
 export default AboutPage;

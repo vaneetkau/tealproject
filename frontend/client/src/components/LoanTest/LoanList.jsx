@@ -29,6 +29,10 @@ function LoanList() {
     ? loans
     : loans.filter((loan) => loan.type === filterType);
 
+    const handleApplyClick = (loanId) => {
+      console.log(`Applying for loan with ID: ${loanId}`);
+    };
+
   return (
     <div className="container-fluid">
       <div className="row">
@@ -83,6 +87,14 @@ function LoanList() {
                   <td className="p-4">{loan.institute}</td>
                   <td className="p-4">${loan.amount}</td>
                   <td className="p-4">{loan.career}</td>
+                  <td className="p-4">
+                        <button
+                          className="btn btn-success"
+                          onClick={() => handleApplyClick(loan._id)}
+                        >
+                          Apply
+                        </button>
+                      </td>
                 </tr>
               ))}
             </tbody>
