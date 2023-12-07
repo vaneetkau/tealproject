@@ -11,6 +11,7 @@ const AboutPage = () => {
       {/* <Header /> */}
       <Navigationbar />
       <ImageSection />
+
       <IconSection />
 
       <TextSection heading="How to do it?" content={loremIpsum} />
@@ -18,6 +19,8 @@ const AboutPage = () => {
       <TextSection heading="What We Do?" content={loremIpsum} />
       <TextSection heading="Our Core Values?" content={loremIpsum} />
       <TwoColumnSection />
+
+      <FeaturesSection />
       <Footer />
     </div>
   );
@@ -43,61 +46,32 @@ const ImageSection = () => {
   );
 };
 
-const TextSection = ({ heading, content }) => {
+const FeaturesSection = () => {
   return (
-    <section className="py-5" style={{ backgroundColor: "#f0f0f0" }}>
+    <section className="py-5" style={{ backgroundColor: "#f0f0f0", padding: "2rem 0" }}>
       <div className="container">
-        <h2 className="text-center mb-4">{heading}</h2>
-        <p>{content}</p>
-      </div>
-    </section>
-  );
-};
-
-const IconSection = () => {
-  return (
-    <section className="py-5" style={{ backgroundColor: "#e0e0e0" }}>
-      <div className="container">
+        <h2 className="text-center mb-4">Platform Features</h2>
         <div className="row text-center">
-          <div className="col-sm iconStyle">Look</div>
-          <div className="col-sm iconStyle">Select</div>
-          <div className="col-sm iconStyle">Apply</div>
-          <div className="col-sm iconStyle">Wait</div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const TwoColumnSection = () => {
-  const imageSectionStyle = {
-    textAlign: "center",
-    padding: "2rem",
-    backgroundImage: `url(${girlBannerImg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "top",
-    position: "relative",
-    borderRadius: "1%",
-    width: "50%",
-    margin: "3rem auto",
-  };
-
-  return (
-    <section className="py-5" style={imageSectionStyle}>
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-8 col-sm-12">
-            {" "}
-            {/* Adjust width for different screen sizes */}
-            <h3 className="text-white">“Don’t wait any longer to follow your desired career”</h3>
+          <div className="col-md-3 col-sm-6 mb-4">
+            <div className="feature-icon">Look</div>
+            <p>Search and explore</p>
+          </div>
+          <div className="col-md-3 col-sm-6 mb-4">
+            <div className="feature-icon">Select</div>
+            <p>Choose options</p>
+          </div>
+          <div className="col-md-3 col-sm-6 mb-4">
+            <div className="feature-icon">Apply</div>
+            <p>Submit applications</p>
+          </div>
+          <div className="col-md-3 col-sm-6 mb-4">
+            <div className="feature-icon">Wait</div>
+            <p>Review responses</p>
           </div>
         </div>
       </div>
     </section>
   );
 };
-
-const loremIpsum =
-  "Welcome to YourFinancialEase.com, your personalized guide to unlocking financial opportunities for education. At YourFinancialEase, we understand that navigating the world of loans and scholarships can be overwhelming. Thats why we have created a user-friendly platform to empower you with the knowledge and options tailored to your unique financial situation.";
 
 export default AboutPage;
