@@ -41,16 +41,23 @@
 }
 
 @media (max-width: 768px) {
-    #sidebar {
-      width: 100%;
-      position: fixed;
-      z-index: 2; /* Make sure the sidebar is on top of the content */
-      transform: translateX(-100%);
+    .main-container-border-radius{
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        padding: 1.5rem;
+        padding-top: 2rem;
     }
   
     sidebar-open #content {
       margin-left: 0;
     }
+
   }
 
+@media (min-width: 768px) {
+    .main-container-border-radius{
+        border-top-left-radius: 3px;
+    }
+    
+}
   
