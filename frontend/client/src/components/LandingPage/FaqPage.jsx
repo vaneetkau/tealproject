@@ -26,12 +26,11 @@ const ImageSection = () => {
   const imageSectionStyle = {
     textAlign: "center",
     padding: "2rem",
-    backgroundColor: "#e0e0e0",
     backgroundImage: `url(${blueBannerImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "300px", // Set your preferred height for the section
-    position: "relative", // Ensure relative positioning for text overlay
+    height: "300px",
+    position: "relative",
   };
   return (
     <section className=" w-100 h-25 d-inline-block" style={imageSectionStyle}>
@@ -43,7 +42,7 @@ const ImageSection = () => {
 const TextSection = () => {
   return (
     <section style={textSectionStyle}>
-      <div className="container-fluid text-left" style={{ backgroundColor: "#F4F4F4" }}>
+      <div className="container-fluid text-left">
         <div className="row">
           <div className="col">
             <h1 className="text-left mb-4">Applying</h1>
@@ -80,7 +79,7 @@ const TextSection = () => {
 const TextSection2 = () => {
   return (
     <section style={textSectionStyle}>
-      <div className="container-fluid text-left" style={{ backgroundColor: "#F4F4F4" }}>
+      <div className="container-fluid text-left">
         <div className="row">
           <div className="col">
             <h1 className="text-left mb-4">General</h1>
@@ -122,7 +121,7 @@ const TextSection2 = () => {
 const TextSection3 = () => {
   return (
     <section style={textSectionStyle}>
-      <div className="container-fluid text-left" style={{ backgroundColor: "#F4F4F4" }}>
+      <div className="container-fluid text-left">
         <div className="row">
           <div className="col">
             <h1 className="text-left mb-4">Repayment</h1>
@@ -163,34 +162,32 @@ const TextSection3 = () => {
 
 const TwoColumnSection = () => {
   const imageSectionStyle = {
-    textAlign: "center",
-    padding: "2rem",
-    backgroundColor: "#e0e0e0",
+    textAlign: 'left',
+    padding: '2rem',
+    backgroundColor: '#e0e0e0',
     backgroundImage: `url(${girlBannerImg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    height: "500px", // Set your preferred height for the section
-    position: "relative", // Ensure relative positioning for text overlay
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    position: 'relative',
+    borderRadius: '2.25%',
+    width: '40%',
+    height: '300px',
+    margin:'auto'
   };
 
   return (
-    <section className=" w-100 d-inline-block" style={imageSectionStyle}>
-      <h3 className="text-white">“Discover, Apply and Ease your Budget”</h3>
-    </section>
+    <div className="text-center">
+      <section className=" w-80 m-4 d-inline-block" style={imageSectionStyle}>
+        <h3 className="text-white pt-3">“Discover, Apply, and</h3>
+        <h3 className="text-white">Ease your Budget”</h3>
+        <button className="btn btn-primary btn-md mt-3">Contact us</button>{' '}
+      </section>
+    </div>
   );
 };
 
 const textSectionStyle = {
   padding: "2rem",
-  backgroundColor: "#f0f0f0",
-};
-
-const sectionStyle = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  padding: "2rem",
-  backgroundColor: "#f0f0f0",
 };
 
 // Add responsive styles

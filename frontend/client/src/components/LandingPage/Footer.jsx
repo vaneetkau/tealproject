@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="fixed-bottom" style={footerStyle}>
+    <footer style={footerStyle}>
       Copyright © 2023 Loanease | All Rights Reserved
     </footer>
   );

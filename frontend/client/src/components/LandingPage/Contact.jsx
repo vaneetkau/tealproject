@@ -36,7 +36,7 @@ const ContactSection = () => {
 
 const ContactForm = () => {
   return (
-    <div className="container mb-5 border border-2 rounded rounded-5" style={{ backgroundColor: "#F9F9F9" }}>
+    <div className="container  border border-2 rounded rounded-5" style={{ backgroundColor: "#F9F9F9" }}>
       <div className="row justify-content-center">
         <div className="col-md-12">
           <form style={{ padding: "10px" }}>

@@ -2,17 +2,23 @@ import React from "react";
 // import Header from './Header';
 import Footer from "./Footer";
 import blueBannerImage from "./blue-banner.png";
-// import girlBannerImg from "./girl-banner.png";
+import girlBannerImg from './girl-banner.png';
 import Navigationbar from "../Navigationbar/Navigationbar";
 
 const AboutPage = () => {
   return (
-    <div style={{ background: "linear-gradient(to top, #A0C7FF 0%, #F9F9F9 30%, #F9F9F9 70%, #FFFFFF 100%)" }}>
-      {/* <Header /> */}
+    <div
+      style={{
+        background:
+          'linear-gradient(to top, #A0C7FF 0%, #F9F9F9 30%, #F9F9F9 70%, #FFFFFF 100%)',
+      }}
+    >
       <Navigationbar />
       <ImageSection />
 
       <FeaturesSection />
+      <TwoColumnSection />
+
       <Footer />
     </div>
   );
@@ -62,6 +68,31 @@ const FeaturesSection = () => {
           </div>
         </div>
       </div>
+    </section>
+  );
+};
+
+const TwoColumnSection = () => {
+  const imageSectionStyle = {
+    textAlign: 'left',
+    padding: '2rem',
+    backgroundColor: '#e0e0e0',
+    backgroundImage: `url(${girlBannerImg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    position: 'relative',
+    borderRadius:'2.25%',
+    width:'40%',
+    height:'300px'
+  };
+
+  return (
+    <section className=" w-80 m-4 d-inline-block" style={imageSectionStyle}>
+      <h3 className="text-white pt-3">“Discover, Apply, and</h3>
+      <h3 className="text-white">Ease your Budget”</h3>
+      <button className="btn btn-primary btn-md mt-3">
+        Contact us
+      </button>{' '}
     </section>
   );
 };
