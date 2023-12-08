@@ -33,7 +33,7 @@ const LatestNews = () => {
                 return (
                   <>
                     <div
-                      class="card"
+                      className="card"
                       style={{
                         marginTop: '2rem',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
@@ -45,16 +45,16 @@ const LatestNews = () => {
                             ? 'https://kubrick.htvapps.com/vidthumb/f6865cb1-d77d-4a31-ba83-d57c4b2324d8/4b9c9d8f-ad14-47ea-bcf4-bf24ee0bb1f3.jpg?crop=0.383xw:0.383xh;0.517xw,0.252xh&resize=1200:*'
                             : ele.image
                         }
-                        class="card-img-top"
+                        className="card-img-top"
                         alt="..."
                       />
-                      <div class="card-body">
-                        <h5 class="card-title">
+                      <div className="card-body">
+                        <h5 className="card-title">
                             {ele.title
                               ? `${ele.description.slice(0, 30)}...`
                               : 'No Ttle available'}
                         </h5>
-                        <p class="card-text">
+                        <p className="card-text">
                           {ele.description
                             ? `${ele.description.slice(0, 50)}...`
                             : 'No description available'}
@@ -62,7 +62,7 @@ const LatestNews = () => {
                         <a
                           href={ele.url}
                           target="_blank"
-                          class="btn btn-primary"
+                          className="btn btn-primary"
                         >
                           Read More
                         </a>

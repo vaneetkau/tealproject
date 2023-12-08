@@ -47,8 +47,8 @@ const Sidebar = () => {
                   <AiOutlineClose />
                 </Link>
               </li>
-              <li class="text-center p-3 rounded sm-screen">
-                <img src={user} alt="LoanEaseLogo" class="img-fluid rounded-circle" />
+              <li className="text-center p-3 rounded sm-screen">
+                <img src={user} alt="LoanEaseLogo" className="img-fluid rounded-circle" />
               </li>
               <ul className="m-0 p-0">
                 {SidebarData.map((item, index) => {
@@ -63,8 +63,8 @@ const Sidebar = () => {
                 })}
               </ul>
             </ul>
-            <li class="text-center p-4 pb-2 sm-screen">
-              <img src={LoanEaseLogoWhite} alt="LoanEaseLogo" class="img-fluid" style={{ maxWidth: "100px", marginBottom: "10px" }} />
+            <li className="text-center p-4 pb-2 sm-screen">
+              <img src={LoanEaseLogoWhite} alt="LoanEaseLogo" className="img-fluid" style={{ maxWidth: "100px", marginBottom: "10px" }} />
             </li>
           </ul>
         </nav>
