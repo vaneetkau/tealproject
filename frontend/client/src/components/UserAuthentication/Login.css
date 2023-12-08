@@ -1,0 +1,54 @@
+@media (max-width: 576px) {
+    body {
+      font-size: 14px;
+      /* Add styles specific to small screens here */
+    }
+    .custom-login{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+  
+  }
+  
+  /* Custom CSS for medium screens (e.g., tablets) */
+  @media (max-width: 768px) {
+    .custom-container-border{
+        border-top-right-radius: 80px;
+        border-top-left-radius: 80px;
+    }
+    .custom-left-container{
+        height: auto;   
+        margin: 5px !important;
+        padding: 5px !important;
+        margin-bottom: 5px;
+    }
+    .container-left-parent{
+        margin: 5px !important;
+        padding: 5px !important;
+    }
+  }
+  
+  /* Custom CSS for large screens (e.g., desktops) */
+  @media (min-width: 768px) and (max-width: 992px) {
+    .custom-container-border{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 80px;
+    }
+    .custom-left-container{
+        height: 100vh;
+    }
+  
+  }
+  
+  /* Custom CSS for extra-large screens (e.g., large desktops) */
+  @media (min-width: 992px) {
+    .custom-container-border{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 80px;
+    }
+    .custom-left-container{
+        height: 100vh;
+    }
+  
+  }
+  

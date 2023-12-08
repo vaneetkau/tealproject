@@ -31,7 +31,7 @@ const Navigationbar = () => {
         </Navbar.Brand>
       </Link>
       <Navbar.Toggle className="mx-2" aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav" className="custom-navbar-collapse">
+      <Navbar.Collapse id="basic-navbar-nav custom-collapse" className="custom-navbar-collapse">
         <Nav className="ms-auto me-auto text-lg bg-white">
           <Nav.Link as={Link} to="/" className={activeNavItem === "/" ? "nav-link active" : "nav-link"}>
             Home
@@ -48,7 +48,9 @@ const Navigationbar = () => {
         </Nav>
         <Nav className="bg-white p-2">
           <Link to="/Login">
-            <Button variant="primary">Login</Button>
+            <Button className="custom-Button" variant="primary">
+              Login
+            </Button>
           </Link>
         </Nav>
       </Navbar.Collapse>

@@ -1,0 +1,15 @@
+@media screen and (min-width: 576px) {
+    /* Small screens and up */
+    .responsive-text {
+      font-size: 18px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    /* Medium screens and up */
+    .responsive-text {
+      font-size: 22px;
+    }
+  }
