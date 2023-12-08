@@ -7,7 +7,7 @@ const LoanAdvice = () => {
 
   const fetchData = async () => {
     let resonse = await fetch(
-      'https://gnews.io/api/v4/search?q=loan&token=ccbe5010bf66d33420ee1330c970621b'
+      'https://gnews.io/api/v4/search?top-headlines?category=educationloan&q=loan&token=ccbe5010bf66d33420ee1330c970621b'
     );
     let data = await resonse.json();
     setMyNews(data.articles.slice(0, 6));
@@ -32,12 +32,30 @@ const LoanAdvice = () => {
         console.log(ele)
         return (
           <>
-        <div class="card" style={{  marginTop:"2rem" , boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
-              <img src={ele.urlToImage == null ? "https://kubrick.htvapps.com/vidthumb/f6865cb1-d77d-4a31-ba83-d57c4b2324d8/4b9c9d8f-ad14-47ea-bcf4-bf24ee0bb1f3.jpg?crop=0.383xw:0.383xh;0.517xw,0.252xh&resize=1200:*" : ele.urlToImage} class="card-img-top" alt="..." />
+            <div
+              class="card"
+              style={{
+                marginTop: '2rem',
+                boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+              }}
+            >
+              <img
+                src={
+                  ele.image == null
+                    ? 'https://kubrick.htvapps.com/vidthumb/f6865cb1-d77d-4a31-ba83-d57c4b2324d8/4b9c9d8f-ad14-47ea-bcf4-bf24ee0bb1f3.jpg?crop=0.383xw:0.383xh;0.517xw,0.252xh&resize=1200:*'
+                    : ele.image
+                }
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
-                <h5 class="card-title">{ele.author == "" ? "Loan Advice" : ele.author}</h5>
+                <h5 class="card-title">
+                  {ele.title == '' ? 'Loan Advice' : ele.title}
+                </h5>
                 <p class="card-text">
-                 {ele.title}
+                  {ele.description
+                    ? `${ele.description.slice(0, 50)}...`
+                    : 'No description available'}
                 </p>
                 <a href={ele.url} target="_blank" class="btn btn-primary">
                   Read More
