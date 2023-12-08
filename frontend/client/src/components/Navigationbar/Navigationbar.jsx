@@ -36,7 +36,7 @@ const Navigationbar = () => {
           <Nav.Link as={Link} to="/" className={activeNavItem === "/" ? "nav-link active" : "nav-link"}>
             Home
           </Nav.Link>
-          <Nav.Link as={Link} to="/about" className={activeNavItem === "/about" ? "nav-link active" : "nav-link"}>
+          <Nav.Link as={Link} to="/AboutPage" className={activeNavItem === "/AboutPage" ? "nav-link active" : "nav-link"}>
             About
           </Nav.Link>
           <Nav.Link as={Link} to="/Contact" className={activeNavItem === "/Contact" ? "nav-link active" : "nav-link"}>

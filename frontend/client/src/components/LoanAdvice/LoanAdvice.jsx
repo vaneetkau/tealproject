@@ -7,7 +7,7 @@ const LoanAdvice = () => {
 
   const fetchData = async () => {
     let resonse = await fetch(
-      "https://newsapi.org/v2/everything?q=loan&apiKey=6f533d796d3b4c98b9744636e95103eb"
+      'https://gnews.io/api/v4/search?q=loan&token=ccbe5010bf66d33420ee1330c970621b'
     );
     let data = await resonse.json();
     setMyNews(data.articles.slice(0, 6));
