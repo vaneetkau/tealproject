@@ -1,0 +1,63 @@
+.color-primary{
+    color: #2267CA;
+}
+.color-grey{
+    color: #979797;
+}
+.color-mango{
+    color: #FFB700;
+}
+.bgcolor-offwhite{
+    background-color: #F3F3F3;
+}
+.bgcolor-lightBlue{
+    background-color: #C8DFFF;
+}
+.bgcolor-primary{
+    background-color: #2267CA;
+}
+.bgcolor-grey{
+    background-color: #979797;
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .custom-container{
+        height: 100vh;
+    }
+    .main-container{
+        padding-top: 30px;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .custom-container{
+        height: 100vh;
+    }  
+    .main-container{
+        padding-top: 30px;
+    }
+}
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .custom-container{
+        height: 100vh;
+    }  
+    .main-container{
+        padding-top: 30px;
+    }  
+}
+  
+  /* Extra small devices (portrait phones, up to 575px) */
+  @media (max-width: 575px) {
+    .custom-container{
+        height: 100vh;
+    }  
+    .main-container{
+        padding-top: 30px;
+    }    
+}
+  

@@ -30,6 +30,8 @@
   .nav-link.active {
     color: #2267CA !important;
   }
-
-
+  .custom-collapse{
+    border-bottom: 1px solid grey;
+  }
+    
 }

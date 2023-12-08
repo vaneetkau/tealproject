@@ -17,7 +17,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div>
+    <div style={{ background: "linear-gradient(to top, #A0C7FF 0%, #F9F9F9 30%, #F9F9F9 70%, #FFFFFF 100%)" }}>
       {/* <Header /> */}
       <Navigationbar />
       <section className="hero container-fluid">

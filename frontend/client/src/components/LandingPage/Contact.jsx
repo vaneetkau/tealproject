@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Navigationbar from "../Navigationbar/Navigationbar";
 
+import "./Contact.css";
+import contactBG from "./Contact-Bg.png";
 const Contact = () => {
   return (
-    <div>
+    <div className="custom-container" style={{ background: "linear-gradient(to top, #A0C7FF 0%, #F9F9F9 30%, #F9F9F9 70%, #FFFFFF 100%)" }}>
       {/* <Header /> */}
       <Navigationbar />
       <ContactSection />
@@ -17,12 +19,12 @@ const Contact = () => {
 
 const ContactSection = () => {
   return (
-    <Container fluid className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh", backgroundColor: "#F4F4F4" }}>
-      <Row>
-        <Col md={6} className="text-center">
+    <Container fluid className="main-container">
+      <Row className="justify-content-around">
+        <Col md={4} className="d-flex flex-column align-items-center justify-content-center">
           <h1 className="mb-4">Let's Talk</h1>
           <p className="mb-4">Don’t worry, ask us any question about our service, fill all the blanks and our team will reach out after reviewing your inquiry!</p>
-          <img src="path/to/your/image.jpg" alt="Description" className="img-fluid" />
+          <img src={contactBG} className="d-inline-block align-top logo_LoanEase img-fluid px-2 d-none d-md-block" style={{ maxWidth: "500px", padding: "10px" }} alt="LoanEase" />
         </Col>
         <Col md={6}>
           <ContactForm />
@@ -34,32 +36,47 @@ const ContactSection = () => {
 
 const ContactForm = () => {
   return (
-    <Form>
-      <Form.Group controlId="formBasicName">
-        <Form.Label className="mb-2">How can we contact you?</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-      </Form.Group>
-
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label className="mb-2">Email Address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted mb-3">We'll never share your email with anyone else.</Form.Text>
-      </Form.Group>
-
-      <Form.Group controlId="formBasicLocation">
-        <Form.Label className="mb-2">Where are you located?</Form.Label>
-        <Form.Control type="text" placeholder="Enter location" />
-      </Form.Group>
-
-      <Form.Group controlId="formBasicTopic">
-        <Form.Label className="mb-2">What is your inquiry about?</Form.Label>
-        <Form.Control type="text" placeholder="Enter your topic" />
-      </Form.Group>
-
-      <Button className="btn btn-lg btn-primary p-4 m-4 rounded-pill" variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+    <div className="container mb-5 border border-2 rounded rounded-5" style={{ backgroundColor: "#F9F9F9" }}>
+      <div className="row justify-content-center">
+        <div className="col-md-12">
+          <form style={{ padding: "10px" }}>
+            <div className="form-group d-flex flex-column align-items-start mb-3">
+              <label className="color-primary" htmlFor="name">
+                What's your name?
+              </label>
+              <input type="text" className="form-control" id="name" placeholder="Your Name" required />
+            </div>
+            <div className="form-group d-flex flex-column align-items-start mb-3">
+              <label className="color-primary" htmlFor="email">
+                How we can contact you?
+              </label>
+              <input type="email" className="form-control" id="email" placeholder="example@email.com" required />
+            </div>
+            <div className="form-group d-flex flex-column align-items-start mb-3">
+              <label className="color-primary" htmlFor="location">
+                Location
+              </label>
+              <input type="text" className="form-control" id="location" placeholder="Enter your location" required />
+            </div>
+            <div className="form-group d-flex flex-column align-items-start mb-3">
+              <label className="color-primary" htmlFor="subject">
+                What is your inquiry about?
+              </label>
+              <input type="text" className="form-control" id="subject" placeholder="Enter topic" required />
+            </div>
+            <div className="form-group d-flex flex-column align-items-start mb-3">
+              <label className="color-primary" htmlFor="message">
+                Tell us everything
+              </label>
+              <textarea className="form-control" id="message" rows="5" placeholder="Type Something" required></textarea>
+            </div>
+            <button type="submit" className="btn btn-primary px-5 rounded rounded-5">
+              SEND
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 };
 

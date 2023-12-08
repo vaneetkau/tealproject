@@ -8,7 +8,7 @@ import Navigationbar from "../Navigationbar/Navigationbar";
 
 const FaqPage = () => {
   return (
-    <div className="d-flex flex-column">
+    <div className="d-flex flex-column" style={{ background: "linear-gradient(to top, #A0C7FF 0%, #F9F9F9 30%, #F9F9F9 70%, #FFFFFF 100%)" }}>
       {/* <Header /> */}
       <Navigationbar />
       <ImageSection />
