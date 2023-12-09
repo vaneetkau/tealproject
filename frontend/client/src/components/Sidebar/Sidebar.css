@@ -1,6 +1,6 @@
 .navbar {
   background-color: #2267CA;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -14,7 +14,7 @@
 
 .nav-menu {
   background-color: #2267CA;
-  width: 200px;
+  width: fit-content;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -22,6 +22,10 @@
   top: 0;
   right: -100%;
   transition: 850ms;
+}
+
+.nav-menu-ul {
+  width: 100%; /* Ensure the parent div takes full width */
 }
 
 .nav-menu.active {
@@ -47,10 +51,12 @@
   display: flex;
   align-items: center;
   padding: 0 12px;
-  border-radius: 4px;
+  border-radius: 4px;  
+  transition: background-color 0.3s;
+  
 }
 
-.nav-text a:hover {
+.nav-menu-ul li.nav-text a:hover {
   background-color: #FFB700;
 }
 
@@ -72,8 +78,9 @@ span {
 }
 
 svg {
-  width: 2em;
-  height: 2em;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
 }
 
 
@@ -81,6 +88,9 @@ ul>li{
   text-align: left;
 }
 
+.nav-menu-ul span {
+  white-space: nowrap;
+}
 
 @media screen and (max-width: 768px) {
   .sm-screen {

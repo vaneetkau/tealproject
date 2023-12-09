@@ -31,7 +31,7 @@ function Login(props) {
       .then(() => {
         alert("Successfully Loggedin");
         console.log("Navigating to /Home");
-        navigate("/Home");
+        navigate("/Dashboard");
       })
       .catch((error) => {
         console.error("Login failed:", error);

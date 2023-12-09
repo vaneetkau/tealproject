@@ -10,7 +10,6 @@ import AboutPage from "./components/LandingPage/AboutPage";
 import FaqPage from "./components/LandingPage/FaqPage";
 import TandCPage from "./components/LandingPage/TandCPage";
 import Contact from "./components/LandingPage/Contact";
-import Home from "./components/Home/Home";
 import LatestNews from "./components/LatestNews/LatestNews";
 import LoanAdvice from "./components/LoanAdvice/LoanAdvice";
 import LoanList from "./components/LoanTest/LoanList";
@@ -20,6 +19,8 @@ import Pay from "./components/Pay/Pay";
 import Statement from "./components/Statement/Statement";
 import MyProfile from "./components/MyProfile";
 import Register from "./components/UserAuthentication/Register";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
   const [currentForm, setCurrentForm] = useState("Login");
@@ -41,8 +42,9 @@ function App() {
           {/* <Route path="/Login" element={<Login />} /> */}
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
+          <Route path="/Sidebar" element={<Sidebar />} />
 
-          <Route path="/home" element={<Home />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/LatestNews" element={<LatestNews />} />
           <Route path="/LoanAdvice" element={<LoanAdvice />} />
           <Route path="/LoanList" element={<LoanList />} />
