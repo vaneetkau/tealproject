@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PieChart from "./PieChart";
 import { Link } from "react-router-dom";
+import './LoanCal.css'
 
 function LoanCalculator() {
   const [formData, setFormData] = useState({
@@ -65,22 +66,22 @@ function LoanCalculator() {
       <div className="row">
         <div className="col-md-6">
           <label>Monthly Income ($):</label>
-          <input className="form-control-md mb-3" type="number" name="income" value={formData.income} onChange={handleInputChange} />
+          <input className="form-control form-control-plain input-centered mb-3 border-bottom" type="number" name="income" value={formData.income} onChange={handleInputChange} />
           <div>
             <label>Housing Expenses ($):</label>
-            <input className="form-control-md mb-3" type="number" name="housing" value={formData.housing} onChange={handleInputChange} />
+            <input className="form-control form-control-plain input-centered mb-3 border-bottom" type="number" name="housing" value={formData.housing} onChange={handleInputChange} />
           </div>
           <div>
             <label>Groceries Expenses ($):</label>
-            <input className="form-control-md mb-3" type="number" name="groceries" value={formData.groceries} onChange={handleInputChange} />
+            <input className="form-control form-control-plain input-centered mb-3 border-bottom" type="number" name="groceries" value={formData.groceries} onChange={handleInputChange} />
           </div>
           <div>
             <label>Transportation Expenses ($):</label>
-            <input className="form-control-md mb-3" type="number" name="transportation" value={formData.transportation} onChange={handleInputChange} />
+            <input className="form-control form-control-plain input-centered mb-3 border-bottom" type="number" name="transportation" value={formData.transportation} onChange={handleInputChange} />
           </div>
           <div>
             <label>Health Expenses ($):</label>
-            <input className="form-control-md mb-3" type="number" name="health" value={formData.health} onChange={handleInputChange} />
+            <input className="form-control form-control-plain input-centered mb-3 border-bottom" type="number" name="health" value={formData.health} onChange={handleInputChange} />
           </div>
         </div>
         <div className="col-md-6">
@@ -110,9 +111,9 @@ function LoanCalculator() {
       <div className="row">
         <div className="col-md-6">
           <label>Loan Amount ($):</label>
-          <input className="form-control-md mb-3" type="number" value={loanAmount} onChange={(e) => setLoanAmount(e.target.value)} />
+          <input className="form-control form-control-plain input-centered mb-3 border-bottom" type="number" value={loanAmount} onChange={(e) => setLoanAmount(e.target.value)} />
           <label>Loan Duration (months):</label>
-          <input className="form-control-md mb-3" type="number" value={loanDuration} onChange={(e) => setLoanDuration(e.target.value)} />
+          <input className="form-control form-control-plain input-centered mb-3 border-bottom" type="number" value={loanDuration} onChange={(e) => setLoanDuration(e.target.value)} />
         </div>
       </div>
 

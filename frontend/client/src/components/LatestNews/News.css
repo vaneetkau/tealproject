@@ -1,0 +1,144 @@
+.mainDiv{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    margin-left: 2rem;
+    height: 400px;
+    width: 350px;
+}
+.heading1{
+    text-align: left;
+    color: #2267CA;
+}
+
+.figcaption{
+    position: absolute;
+    bottom: 2rem;
+    margin: 0 2rem;
+
+}
+
+.card-title{
+    text-align: left;
+
+}
+.card-text{
+    text-align: left;
+}
+.card-a {
+    color: black;
+    text-decoration: none;
+} 
+
+@media screen and (max-width:578px) {
+    .card{
+        margin-left: 5.2rem;
+        height: 400px;
+        width: 350px;
+    }
+}
+@media screen and (max-width:503px) {
+    .card{
+        margin-left: 4.2rem;
+    }
+}
+@media screen and (max-width:469px) {
+    .card{
+        margin-left: 3.2rem;
+    }
+}
+@media screen and (max-width:437px) {
+    .card{
+        margin-left: 2.2rem;
+    }
+}
+@media screen and (max-width:415px) {
+    .card{
+        margin-left: 1.2rem;
+    }
+}
+@media screen and (max-width:390px) {
+    .card{
+        margin-left: 1.2rem;
+        height: 420px;
+        width: 330px;
+    }
+}
+
+.yellowButton {
+    background-color:#FFB700;
+    ;
+    /* Add more styles as needed */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border-color: #FFB700;
+    color: white; /* Adjust text color for visibility */
+  }
+.divcss{
+    padding-left: 30px;
+}
+
+.tablecss {
+    padding-left: 30px;
+    border-collapse:collapse; 
+    border: 0px white !important; 
+}
+
+.tdcss {
+     border: 0px white !important; 
+    padding: 5px;
+    /* text-align: left; */
+}
+
+.headingcss{
+    color:  #2267CA;;
+}
+
+.divcss {
+    overflow-x: auto; /* Add horizontal scrollbar if needed */
+  }
+  
+  .tablecss {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tdcss {
+    padding: 15px;
+  }
+  
+  .text-Left {
+    text-align: left;
+  }
+  
+
+  
+  .paddingleft {
+    padding-left: 20px; /* Adjust the padding as needed */
+  }
+  
+  /* Add media query for responsiveness */
+  @media only screen and (max-width: 600px) {
+    .tdcss {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .paddingleft {
+      padding-left: 0; /* Reset padding for small screens */
+    }
+  
+    .yellowButton {
+      width: 100%; /* Make the button full width on small screens */
+    }
+  
+    img {
+      width: 100%; /* Make the image fill the container on small screens */
+      height: auto; /* Maintain aspect ratio */
+    }
+  }
