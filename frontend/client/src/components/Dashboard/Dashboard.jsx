@@ -4,6 +4,10 @@ import { getAuth } from "firebase/auth";
 import "./DashboardCSS.css";
 import pig from "./Pig.png";
 import pigSmall from "./Pig-sm.png";
+import lightningSmall from "./lightning.png";
+import gifts from "./gifts.png";
+import MoneyPouch from "./Money-Pouch.png";
+
 import income from "./Income.png";
 import housing from "./Housing.png";
 import lifestyle from "./Lifestyle.png";
@@ -117,26 +121,26 @@ const Dashboard = () => {
                         <div className="col-lg-4 col-4 d-flex flex-column align-items-center">
                           <div className="card w-100 h-50">
                             <div className="card-body color-primary">
-                              <div>0</div>
+                              <img src={pigSmall} className="d-inline-block align-top logo_LoanEase2p-0 m-00" alt="LoanEase" />
                             </div>
                           </div>
-                          <span className="color-primary mt-2">Materials</span>
+                          <span className="color-primary mt-2 p-2">Materials</span>
                         </div>
                         <div className="col-lg-4 col-4 d-flex flex-column align-items-center">
                           <div className="card w-100 h-50">
                             <div className="card-body color-primary">
-                              <div>3</div>
+                              <img src={lightningSmall} className="d-inline-block align-top logo_LoanEase p-0 m-00" alt="LoanEase" />
                             </div>
                           </div>
-                          <span className="color-primary mt-2">Projects</span>
+                          <span className="color-primary mt-2 p-2">Projects</span>
                         </div>
                         <div className="col-lg-4 col-4 d-flex flex-column align-items-center">
                           <div className="card w-100 h-50">
                             <div className="card-body color-primary">
-                              <div>0</div>
+                              <img src={gifts} className="d-inline-block align-top logo_LoanEase p-2 m-00" alt="LoanEase" />
                             </div>
                           </div>
-                          <span className="color-primary mt-2">Winter Shop</span>
+                          <span className="color-primary mt-2 p-2">Gifts</span>
                         </div>
                       </div>
                     </div>
@@ -146,26 +150,26 @@ const Dashboard = () => {
                         <div className="col-lg-4 col-4 d-flex flex-column align-items-center">
                           <div className="card w-100 h-50">
                             <div className="card-body color-primary">
-                              <div>2</div>
+                              <img src={MoneyPouch} className="d-inline-block align-top logo_LoanEa2e p-0 m-00" alt="LoanEase" />
                             </div>
                           </div>
-                          <span className="color-primary mt-2">Loan1</span>
+                          <span className="color-primary mt-2 p-2">Loan1</span>
                         </div>
                         <div className="col-lg-4 col-4 d-flex flex-column align-items-center">
                           <div className="card w-100 h-50">
                             <div className="card-body color-primary">
-                              <div>1</div>
+                              <img src={MoneyPouch} className="d-inline-block align-top logo_LoanEa2e p-0 m-00" alt="LoanEase" />
                             </div>
                           </div>
-                          <span className="color-primary mt-2">Loan2</span>
+                          <span className="color-primary mt-2 p-2">Loan2</span>
                         </div>
                         <div className="col-lg-4 col-4 d-flex flex-column align-items-center">
                           <div className="card w-100 h-50">
                             <div className="card-body color-primary">
-                              <div>6</div>
+                              <img src={MoneyPouch} className="d-inline-block align-top logo_LoanEa2e p-0 m-00" alt="LoanEase" />
                             </div>
                           </div>
-                          <span className="color-primary mt-2">Loan3</span>
+                          <span className="color-primary mt-2 p-2">Loan3</span>
                         </div>
                       </div>
                     </div>

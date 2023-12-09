@@ -19,19 +19,19 @@ export const SidebarData = [
     title: "Home",
     path: "/Dashboard",
     icon: <IoHomeOutline />,
-    className: "nav-text px-3",
+    className: "nav-text px-3 ",
   },
   {
     title: "Latest News",
     path: "/LatestNews",
     icon: <GrFlag />,
-    className: "nav-text px-3",
+    className: "nav-text px-3 ",
   },
   {
     title: "Get Advice",
     path: "/LoanAdvice",
     icon: <BsExclamationCircle />,
-    className: "nav-text px-3",
+    className: "nav-text px-3 ",
   },
   {
     title: "Get your ease",

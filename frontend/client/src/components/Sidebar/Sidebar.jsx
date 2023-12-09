@@ -50,7 +50,7 @@ const Sidebar = () => {
               <li className="text-center p-3 rounded sm-screen">
                 <img src={user} alt="LoanEaseLogo" className="img-fluid rounded-circle" />
               </li>
-              <ul className="m-0 p-0 d-flex flex-column align-items-start">
+              <ul className="m-0 p-0 d-flex flex-column align-items-start navbar-links nav-menu-ul w-100">
                 {SidebarData.map((item, index) => {
                   return (
                     <li key={index} className={item.className}>
